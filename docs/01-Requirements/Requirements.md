@@ -12,7 +12,7 @@ For this project I'm focusing on the photo/light sensor system to measure underw
 | Light sensor type | Photoresistor (LDR) | Photoresistor (LDR) with voltage divider | No |
 | Sensor connection | Analog voltage to ADC pin | Stable analog signal with noise filtering | No |
 | Waterproof housing | Epoxy coated sensor | Sealed tube with transparent end | No |
-| Depth rating | 1 meter submersion | 1 meter submersion | No |
+| Depth rating | 1 meter submersion | 1 meter submersion | Yes |
 | Measurement range | Detect light in the dark | 0–1,000 lux (approximate) | Yes |
 | Accuracy | Distinguish light levels | 25% of actual lux | Yes |
 | Power consumption | < 10 mA | < 5 mA | Yes |
