@@ -825,21 +825,92 @@
   <h1>Module's Requirements</h1>
 
 <h2 id="module-requirements">Module Requirements</h2>
-<p>For this project I'm focusing on the photo/light sensor system to measure underwater light levels for environmental analysis.
-| Requirement Description | Measure of Threshold | Target Measure | Stretch Requirement (Y-N) |
-|---|---|---|---|
-| Surface mounted microcontroller | 1 PIC or ESP microcontroller | 8-bit PIC or ESP32 | No |
-| Surface mounted, 3.3V switching power regulator | 3.2 Volts | 3.3 Volts | No |
-| Wireless Communication | Able to send or receive a Wi-Fi data | Send and receive Wi-Fi Data to MQTT | Yes |
-| Light sensor type | Photoresistor (LDR) | Photoresistor (LDR) with voltage divider | No |
-| Sensor connection | Analog voltage to ADC pin | Stable analog signal with noise filtering | No |
-| Waterproof housing | Epoxy coated sensor | Sealed tube with transparent end | No |
-| Depth rating | 1 meter submersion | 1 meter submersion | Yes |
-| Measurement range | Detect light in the dark | 0–1,000 lux (approximate) | Yes |
-| Accuracy | Distinguish light levels | 25% of actual lux | Yes |
-| Power consumption | &lt; 10 mA | &lt; 5 mA | Yes |
-| Calibration | Manual calibration in code | Two point calibration (dark/bright) | Yes |
-| Failure detection | Visual inspection | Timeout check in software | No |</p>
+<p>For this project I'm focusing on the photo/light sensor system to measure underwater light levels for environmental analysis.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement Description</th>
+<th>Measure of Threshold</th>
+<th>Target Measure</th>
+<th>Stretch Requirement (Y-N)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface mounted microcontroller</td>
+<td>1 PIC or ESP microcontroller</td>
+<td>8-bit PIC or ESP32</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Surface mounted, 3.3V switching power regulator</td>
+<td>3.2 Volts</td>
+<td>3.3 Volts</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Wireless Communication</td>
+<td>Able to send or receive a Wi-Fi data</td>
+<td>Send and receive Wi-Fi Data to MQTT</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Light sensor type</td>
+<td>Photoresistor (LDR)</td>
+<td>Photoresistor (LDR) with voltage divider</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Sensor connection</td>
+<td>Analog voltage to ADC pin</td>
+<td>Stable analog signal with noise filtering</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Waterproof housing</td>
+<td>Epoxy coated sensor</td>
+<td>Sealed tube with transparent end</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Depth rating</td>
+<td>1 meter submersion</td>
+<td>1 meter submersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Measurement range</td>
+<td>Detect light in the dark</td>
+<td>0–1,000 lux (approximate)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Distinguish light levels</td>
+<td>25% of actual lux</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Power consumption</td>
+<td>&lt; 10 mA</td>
+<td>&lt; 5 mA</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Manual calibration in code</td>
+<td>Two point calibration (dark/bright)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Failure detection</td>
+<td>Visual inspection</td>
+<td>Timeout check in software</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
 
 
