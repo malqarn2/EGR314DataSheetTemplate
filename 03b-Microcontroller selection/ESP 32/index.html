@@ -677,15 +677,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-photoresistor-esp32-compatibility-research" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Photoresistor-ESP32 Compatibility Research
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -892,15 +883,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-photoresistor-esp32-compatibility-research" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Photoresistor-ESP32 Compatibility Research
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -927,7 +909,6 @@
   <h1>ESP 32</h1>
 
 <h2 id="1-project-requirements-analysis"><strong>1. Project Requirements Analysis</strong></h2>
-<p>Based on the underwater rover's block diagram and photoresistor subsystem requirements:</p>
 <table>
 <thead>
 <tr>
@@ -1052,19 +1033,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="3-photoresistor-esp32-compatibility-research"><strong>3. Photoresistor-ESP32 Compatibility Research</strong></h2>
-<p><strong>Library and Code Research Findings:</strong>
-- <strong>ESP32 ADC Library</strong>: Built-in <code>analogRead()</code> function in Arduino framework
-- <strong>Example Code Available</strong>: Multiple ESP32 photoresistor examples on GitHub and Arduino forums
-- <strong>Known Issues</strong>: ESP32 ADC has non-linear characteristics (effective 9-10 bits of 12-bit ADC)
-- <strong>Solution</strong>: Implement software calibration curve for accurate light measurements
-- <strong>No Major Compatibility Issues</strong>: Simple voltage divider + ADC reading is well-documented</p>
-<p><strong>Peripheral Communication Analysis:</strong>
-- <strong>Photoresistor Interface</strong>: Simple analog voltage (0-3.3V)
-- <strong>Required Functions</strong>: Single <code>analogRead()</code> call per measurement
-- <strong>Initialization</strong>: None required beyond ADC configuration
-- <strong>Calibration</strong>: Software-based using known light intensities
-- <strong>Error Handling</strong>: Basic range checking for valid ADC values (0-4095)</p>
 
 
 
