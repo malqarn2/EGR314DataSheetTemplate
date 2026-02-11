@@ -1219,8 +1219,6 @@ $2.98 each<br>
 ~$3.50 estimated BOM cost (excluding labor)
 Components:
 - GL5528 Photoresistor: <span class="arithmatex">\(0.75 [DigiKey: GL5528 Photoresistor](https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlj1fnVHDFXcm9ZQE3CLO1GPB&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgn8fMz6UXPT-uEfW5XfMAOu1Ybf4zwVPDRpQ6ir3dRp-_qCq7aVhvcaAkxmEALw_wcB)
-- OPA344 Op-Amp: <span class="arithmatex">\(1.20 [DigiKey: OPA344 Rail-to-Rail Op-Amp](https://www.digikey.com/en/products/detail/texas-instruments/OPA344NA-3K/750019)
-- 0805 SMD Resistors/Capacitors: ~\)</span>0.55
 - Waterproof housing materials: ~\)</span>1.00</p>
 <p><strong>Pros</strong>
 * Can achieve IP68 waterproof rating for reliable underwater operation
@@ -1240,7 +1238,7 @@ Components:
 * Longer development timeline compared to off-the-shelf solutions</p>
 <hr>
 <p><strong>Choice:</strong> <strong>Option 3: Custom GL5528 Photoresistor Circuit with Waterproof Housing</strong></p>
-<p><strong>Rationale:</strong> The underwater rover application demands a waterproof sensor, which commercial light sensors do not provide without significant modification. The custom GL5528 solution allows us to create a fully submersible sensor (IP68 rating) specifically optimized for underwater light penetration, where blue-green wavelengths (450-550nm) dominate. While requiring more initial design effort, this approach provides better long-term reliability underwater, allows customization for our specific depth and water conditions, and maintains compliance with the 0805 SMD component requirement. The OPA344 buffer ensures a clean 0-3.3V output compatible with the microcontroller's ADC while providing high input impedance to prevent loading the photoresistor. The total cost ($3.50) remains reasonable compared to commercial underwater sensors (typically $50+), and the design can be easily scaled for multiple rover units.</p>
+<p><strong>Rationale:</strong> The underwater rover application demands a waterproof sensor, which commercial light sensors do not provide without significant modification. The custom GL5528 solution allows us to create a fully submersible sensor (IP68 rating) specifically optimized for underwater light penetration, where blue-green wavelengths (450-550nm) dominate. While requiring more initial design effort, this approach provides better long-term reliability underwater, allows customization for our specific depth and water conditions. The total cost ($3.50) remains reasonable compared to commercial underwater sensors (typically $50+), and the design can be easily scaled for multiple rover units.</p>
 <hr>
 <h2 id="33v-power-regulation-subsystem"><strong>3.3V Power Regulation Subsystem</strong></h2>
 <h3 id="option-1-ap2112k-33trg1-ldo-regulator"><strong>Option 1: AP2112K-3.3TRG1 LDO Regulator</strong></h3>
