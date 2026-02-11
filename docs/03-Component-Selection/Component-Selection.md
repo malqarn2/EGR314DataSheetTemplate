@@ -53,8 +53,6 @@ $2.98 each
 ~$3.50 estimated BOM cost (excluding labor)
 Components:
 - GL5528 Photoresistor: $0.75 [DigiKey: GL5528 Photoresistor](https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&gad_source=1&gad_campaignid=20232005509&gbraid=0AAAAADrbLlj1fnVHDFXcm9ZQE3CLO1GPB&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgn8fMz6UXPT-uEfW5XfMAOu1Ybf4zwVPDRpQ6ir3dRp-_qCq7aVhvcaAkxmEALw_wcB)
-- OPA344 Op-Amp: $1.20 [DigiKey: OPA344 Rail-to-Rail Op-Amp](https://www.digikey.com/en/products/detail/texas-instruments/OPA344NA-3K/750019)
-- 0805 SMD Resistors/Capacitors: ~$0.55
 - Waterproof housing materials: ~$1.00
 
 **Pros**
@@ -79,7 +77,7 @@ Components:
 
 **Choice:** **Option 3: Custom GL5528 Photoresistor Circuit with Waterproof Housing**
 
-**Rationale:** The underwater rover application demands a waterproof sensor, which commercial light sensors do not provide without significant modification. The custom GL5528 solution allows us to create a fully submersible sensor (IP68 rating) specifically optimized for underwater light penetration, where blue-green wavelengths (450-550nm) dominate. While requiring more initial design effort, this approach provides better long-term reliability underwater, allows customization for our specific depth and water conditions, and maintains compliance with the 0805 SMD component requirement. The OPA344 buffer ensures a clean 0-3.3V output compatible with the microcontroller's ADC while providing high input impedance to prevent loading the photoresistor. The total cost ($3.50) remains reasonable compared to commercial underwater sensors (typically $50+), and the design can be easily scaled for multiple rover units.
+**Rationale:** The underwater rover application demands a waterproof sensor, which commercial light sensors do not provide without significant modification. The custom GL5528 solution allows us to create a fully submersible sensor (IP68 rating) specifically optimized for underwater light penetration, where blue-green wavelengths (450-550nm) dominate. While requiring more initial design effort, this approach provides better long-term reliability underwater, allows customization for our specific depth and water conditions. The total cost ($3.50) remains reasonable compared to commercial underwater sensors (typically $50+), and the design can be easily scaled for multiple rover units.
 
 ---
 
