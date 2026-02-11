@@ -22,7 +22,7 @@
 | **UART Interfaces** | 3 UART controllers | 1 for subsystem communication |  **Exceeds** |
 | **GPIO Pins** | 34 programmable GPIOs | Minimum 3 required |  **Exceeds** |
 | **Operating Voltage** | 3.3V | Compatible with photoresistor circuit |  **Meets** |
-| **WiFi/Bluetooth** | 802.11 b/g/n/e/i + Bluetooth 4.2 | Required for data transmission |  **Meets** |
+| **WiFi/Bluetooth** |  Bluetooth 4.2 | Required for data transmission |  **Meets** |
 | **Flash Memory** | 4MB | Ample for sensor firmware |  **Exceeds** |
 | **SRAM** | 520KB | More than sufficient |  **Exceeds** |
 | **Power Consumption** | 240MHz: ~160mA<br>Light-sleep: ~0.8mA | Suitable for rover operation |  **Meets** |
