@@ -1,6 +1,6 @@
 ## **1. Project Requirements Analysis**
 
-Based on the underwater rover's block diagram and photoresistor subsystem requirements:
+
 
 | Requirement | Quantity Needed | Justification |
 |-------------|----------------|---------------|
@@ -28,19 +28,4 @@ Based on the underwater rover's block diagram and photoresistor subsystem requir
 | **Power Consumption** | 240MHz: ~160mA<br>Light-sleep: ~0.8mA | Suitable for rover operation |  **Meets** |
 | **Package** | Surface-mount module | Meets EGR 314 requirements |  **Meets** |
 
-## **3. Photoresistor-ESP32 Compatibility Research**
-
-**Library and Code Research Findings:**
-- **ESP32 ADC Library**: Built-in `analogRead()` function in Arduino framework
-- **Example Code Available**: Multiple ESP32 photoresistor examples on GitHub and Arduino forums
-- **Known Issues**: ESP32 ADC has non-linear characteristics (effective 9-10 bits of 12-bit ADC)
-- **Solution**: Implement software calibration curve for accurate light measurements
-- **No Major Compatibility Issues**: Simple voltage divider + ADC reading is well-documented
-
-**Peripheral Communication Analysis:**
-- **Photoresistor Interface**: Simple analog voltage (0-3.3V)
-- **Required Functions**: Single `analogRead()` call per measurement
-- **Initialization**: None required beyond ADC configuration
-- **Calibration**: Software-based using known light intensities
-- **Error Handling**: Basic range checking for valid ADC values (0-4095)
 
