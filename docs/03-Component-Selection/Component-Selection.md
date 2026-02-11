@@ -211,7 +211,6 @@ $0.32 per 10-pin strip
 
 ### **Option 1: Model 0930 9V 3A AC-DC Wall Power Supply(given in class)**
 In class 
-[Manufacturer: Generic Model 0930 Specification]()
 
 **Pros**
 * Exact voltage specification (9V DC) matches our system requirements
@@ -251,10 +250,11 @@ $0.69 each
 * Less common in hobbyist projects
 * Potential reliability concerns with repeated insertion
 
+---
 
+**Choice:** **Option 1**: Model 0930 9V 3A AC-DC Wall Power Supply
 
-**Choice:** **Option 1: CUI Devices PJ-102AH**
-
-**Rationale:** The PJ-102AH provides a reliable, cost-effective power connection that matches our 9V power supply's plug. While through-hole rather than SMD, power connectors often require through-hole mounting for mechanical stability, especially in applications subject to movement and insertion forces. The 2A rating exceeds our estimated maximum current draw, and the simple design minimizes potential failure points. The cost savings ($0.82 vs $2.15) can be allocated to other subsystems, and the connector's widespread use ensures availability and compatibility.
+**Rationale**:
+The rover requires a dependable and precisely regulated power source for consistent operation in field conditions. This supply provides the exact 9V output needed by our voltage regulator, eliminating any additional voltage conversion circuitry. Its 3A capacity offers substantial headroom above our maximum power requirements, ensuring reliable performance under load. While a generic model without formal certifications, its universal AC input (100–240V) supports worldwide operation, and the standard barrel jack connects directly to our PJ-102AH receptacle. The balance of exact voltage matching, ample power margin, and straightforward integration justifies selecting this option for our prototyping needs.
 
 ---
