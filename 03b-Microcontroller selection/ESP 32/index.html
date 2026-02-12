@@ -677,6 +677,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-pinout-support-for-photoresistor-uart" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Pinout Support for Photoresistor &amp; UART
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-1-esp32-wroom-32d-pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 1: ESP32-WROOM-32D pinout.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adc-channels-for-analog-light-sensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. ADC Channels for Analog Light Sensing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-uart-interfaces-for-subsystem-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. UART Interfaces for Subsystem Communication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-team-role-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Team Role &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -883,6 +928,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-pinout-support-for-photoresistor-uart" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Pinout Support for Photoresistor &amp; UART
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-1-esp32-wroom-32d-pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 1: ESP32-WROOM-32D pinout.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adc-channels-for-analog-light-sensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. ADC Channels for Analog Light Sensing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-uart-interfaces-for-subsystem-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. UART Interfaces for Subsystem Communication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-team-role-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Team Role &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1033,6 +1123,64 @@
 </tr>
 </tbody>
 </table>
+<h2 id="3-pinout-support-for-photoresistor-uart">3. Pinout Support for Photoresistor &amp; UART</h2>
+<p><strong>Source:</strong> ESP32-WROOM-32D Datasheet, Section 2: Pin Definitions, Table 2<br>
+<strong>Link:</strong> <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf">ESP32-WROOM-32D Datasheet (Espressif)</a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/8ef3b636-0148-4625-af39-ad307d949317" data-desc-position="bottom"><img width="505" height="525" alt="Image" src="https://github.com/user-attachments/assets/8ef3b636-0148-4625-af39-ad307d949317"></a></p>
+<h2 id="figure-1-esp32-wroom-32d-pinout"><em>Figure 1: ESP32-WROOM-32D pinout.</em></h2>
+<h2 id="4-adc-channels-for-analog-light-sensing">4. ADC Channels for Analog Light Sensing</h2>
+<p><strong>Source:</strong> ESP32-WROOM-32D Datasheet, Section 4.4: ADC<br>
+<strong>Relevant Excerpt:</strong></p>
+<blockquote>
+<p>"The ESP32 integrates two 12-bit SAR ADCs (ADC1 and ADC2) supporting a total of 18 measurement channels. ADC1 is recommended for analog reading as it is not affected by WiFi/BT coexistence."</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>ADC Channel</th>
+<th>GPIO Pin</th>
+<th>Our Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADC1_CH0</td>
+<td>GPIO36</td>
+<td>Photoresistor analog input</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why this matters:</strong> ADC1 is not shared with the WiFi radio, ensuring clean, stable light sensor readings even during wireless transmission.</p>
+<hr>
+<h2 id="5-uart-interfaces-for-subsystem-communication">5. UART Interfaces for Subsystem Communication</h2>
+<p><strong>Source:</strong> ESP32-WROOM-32D Datasheet, Section 4.6: UART<br>
+<strong>Relevant Excerpt:</strong></p>
+<blockquote>
+<p>"The ESP32 has three UART interfaces (UART0, UART1, UART2). Each UART controller is independently configurable with baud rates up to 5 Mbps."</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>UART</th>
+<th>TX Pin</th>
+<th>RX Pin</th>
+<th>Our Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART2</td>
+<td>GPIO17</td>
+<td>GPIO16</td>
+<td>Communication with other rover subsystems</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why this matters:</strong> UART0 is reserved for programming/debug. UART2 provides a dedicated, interference-free serial link to the rest of the rover.</p>
+<hr>
+<h2 id="6-team-role-responsibilities">6. Team Role &amp; Responsibilities</h2>
+<p><strong>Role:</strong> Sensors and Communication Subsystem Lead</p>
+<p><strong>Responsibilities:</strong> I am responsible for the design, implementation, and integration of the photoresistor-based ambient light sensing system and the inter-subsystem UART communication link. For sensing, I selected a photoresistor voltage divider circuit interfaced to the ESP32's ADC1_CH0 (GPIO36), utilizing the 12-bit SAR ADC with WiFi-isolated channels to ensure noise-free analog readings.</p>
 
 
 
