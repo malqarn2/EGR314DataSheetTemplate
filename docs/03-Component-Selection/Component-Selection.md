@@ -2,7 +2,6 @@
 title: Module's Selected Major Components
 ---
 
-# Part 1: Major Component Selections
 
 ## **Photoresistor/Light Sensor Subsystem**
 
