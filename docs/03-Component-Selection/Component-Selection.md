@@ -83,74 +83,102 @@ Components:
 
 ## **3.3V Power Regulation Subsystem** 
 
-### **Option 1: AP2112K-3.3TRG1 LDO Regulator**
-![AP2112K](https://cdn.digikey.com/Photos/Diodes%20Inc%20Photos/AP2112.jpg)  
-$0.72 each  
-[DigiKey: AP2112K-3.3TRG1 LDO Regulator](https://www.digikey.com/en/products/detail/diodes-incorporated/AP2112K-3-3TRG1/447832)
+### **Option 1: LM2940T-3.3 LDO Regulator**
+
+![LM2940T](https://github.com/user-attachments/assets/4402b0fa-46ec-4bc7-a2eb-654e49398680)
+
+
+**$0.6667 each** 
+[DigiKey: LM2940T-3.3 LDO Regulator](https://www.digikey.com/en/products/detail/taejin/LM2940T-3.3/22237350)
 
 **Pros**
-* Very low output noise (30μV RMS) critical for analog sensors
-* Simple circuit with minimal external components (2 capacitors)
-* Fixed 3.3V output eliminates need for adjustment resistors
-* 600mA output current provides ample margin for sensors
-* SOT-23-5 package is easy to hand-solder for prototyping
-* Built-in thermal shutdown and current limit protection
+* **Very low dropout voltage**: 0.63V max at 1A – operates from 4V input for 3.3V out
+* Wide input voltage range up to **26V**, ideal for 9V/12V/24V systems
+* **1A output current** capability, sufficient for most sensor + MCU loads
+* Through-hole TO-220 package, easy for breadboarding and hand-wiring
+* **Quiescent current only 500µA** typical – better than LM78xx family
+* Built-in protection: over-current, over-temperature, **reverse polarity**
+* Operating temperature range: -40°C to +125°C, suitable for industrial use
+* Low price point at volume: $0.67 in 100-piece tubes
 
 **Cons**
-* Linear regulator has poor efficiency with 9V input (≈37%)
-* Significant heat dissipation at higher currents (1.14W at 200mA)
-* Dropout voltage (1.3V) requires minimum 4.6V input
-* Not adjustable if different voltage needed for other components
-* Requires heatsinking or large PCB copper pour for thermal management
-* Higher quiescent current (60μA) than some switching regulators
-
-### **Option 2: TPS62133DSGR Step-Down Switching Regulator**
-![TPS62133](https://cdn.digikey.com/Photos/Texas%20Instruments%20Photos/TPS62133%20DSG.jpg)  
-$3.52 each  
-[DigiKey: TPS62133DSGR Switching Regulator](https://www.digikey.com/en/products/detail/texas-instruments/TPS62133DSGR/1767206)
-
-**Pros**
-* High efficiency (95% typical) reduces heat and power waste
-* 3A output current provides substantial overhead
-* Adjustable output voltage via external resistors
-* Synchronous rectification eliminates need for external diode
-* Wide input voltage range (3-17V) accommodates varying supply
-* Power save mode improves light-load efficiency
-
-**Cons**
-* Requires external inductor and more capacitors
-* Switching noise may interfere with sensitive analog sensors
-* More complex PCB layout for proper operation
-* WSON-8 package is challenging for hand-soldering
-* Higher cost than LDO solutions
-* Longer design and verification time required
-
-### **Option 3: MIC5205-3.3YM5-TR LDO Regulator**
-![MIC5205](https://cdn.digikey.com/Photos/Microchip%20Photos/MIC5205.jpg)  
-$0.95 each  
-[DigiKey: MIC5205-3.3YM5-TR LDO Regulator](https://www.digikey.com/en/products/detail/microchip-technology/MIC5205-3-3YM5-TR/1014749)
-
-**Pros**
-* Extremely low noise (75μV typical) for sensitive analog circuits
-* Very low dropout voltage (210mV typical at 150mA)
-* Stable with low-ESR ceramic capacitors
-* Reverse battery protection built-in
-* SOT-23-5 package compatible with standard assembly
-* Good line and load regulation specifications
-
-**Cons**
-* Lower current capability (150mA) than AP2112K
-* More expensive than comparable LDOs
-* Requires external protection diode for reverse current
-* Thermal performance less robust than AP2112K
-* Limited availability in some regions
-* Higher ground current than some competitors
+* **Marketplace product**: Ships from Taejin (not DigiKey stock), ~7 day handling + possible $89 flat fee for small orders
+* **Not a low-noise LDO** – output noise and PSRR unspecified, not optimized for sensitive analog
+* Fixed 3.3V only, no adjustable version available
+* Larger through-hole package consumes more board space than SOT-23 LDOs
+* Efficiency still linear: ~37% at 9V in, 1A out = 5.7W heat – **requires heatsink**
+* Higher dropout than modern LDOs (AP2112 is 1.3V, but this needs less headroom)
+* 25mA max supply current at no load is higher than some competitors
 
 ---
 
-**Choice:** **Option 1: AP2112K-3.3TRG1 LDO Regulator**
 
-**Rationale:** For the sensor power rail, clean and stable 3.3V power is more critical than efficiency. The AP2112K provides exceptionally low output noise (30μV RMS), which is essential for accurate analog light measurements. While efficiency is poor with our 9V input, the rover is powered from a wall supply with ample capacity, making efficiency less important than signal integrity. The 600mA capability provides good margin for all sensors, and the simple two-capacitor design reduces both BOM cost and PCB complexity. Thermal concerns can be addressed with adequate PCB copper pour, and the SOT-23-5 package is manufacturable within our capabilities.
+### **Option 2: LM7805CT-NOPB Linear Regulator**
+![LM7805CT](https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301)
+
+**$1.80 each**
+
+[DigiKey: LM7805CT-NOPB Linear Regulator](https://www.digikey.com/en/products/detail/texas-instruments/LM7805CT-NOPB/3901929)
+
+
+
+**Pros**
+* Very rugged and proven design with decades of field history
+* Wide input voltage range (7V to 25V) ideal for 9V battery/supply operation
+* High output current capability (1.5A max) for powering multiple sensors
+* Excellent thermal shutdown and short-circuit protection built-in
+* Through-hole TO-220 package is extremely easy to prototype on breadboards
+* No external passives required for basic operation
+* Industry-standard pinout, widely available and second-sourced
+* Junction temperature range up to +125°C for robust operation
+
+
+**Cons**
+* Much higher dropout voltage (2V) requires minimum 7V input for 5V out
+* Linear efficiency only ~55% at 9V input (worse than AP2112 for lower Vout)
+* Large through-hole package consumes significant board space
+* No adjustable version; fixed 5.0V output only
+* Significant heat generation: at 500mA load with 9V input, power dissipation is 2W
+* Requires heatsink for currents above ~300mA in ambient temperatures
+* Higher quiescent current (5mA typical) than modern LDOs or switchers
+* Output noise and ripple rejection inferior to low-noise LDOs for analog circuits
+
+---
+
+### **Option 3: LM2575T-3.3G Switching Regulator**
+![LM2575T](https://github.com/user-attachments/assets/26bf1b16-a4f2-4a0a-b779-7738411228d3)
+
+**$2.78 each**
+gived in class
+[DigiKey: LM2575T-3.3G Switching Regulator](https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700) 
+
+**Pros**
+* High efficiency step-down (buck) regulator: ~78% efficient with 9V input
+* Significantly less heat generation than linear regulators (0.45W at 200mA)
+* Wide input voltage range: 4.75V to 40V, highly versatile for various supplies
+* Fixed 3.3V output with ±4% tolerance over line/load/temperature
+* 1A output current capability sufficient for most sensor suites
+* Built-in thermal shutdown and current limit protection
+* Simple circuit requires only 4 external components
+* Through-hole TO-220 package with 5 leads, breadboard-friendly
+* 52 kHz fixed frequency oscillator—avoids noise issues in audio bands
+
+
+**Cons**
+* Higher cost than equivalent LDO solutions (≈4× price of AP2112)
+* Larger footprint: requires external inductor and Schottky diode
+* Output ripple voltage (50mV typical) may need post-filtering for sensitive analog sensors
+* Slower transient response compared to LDOs
+* Through-hole package only—no SMD option in this fixed voltage variant
+* Bulky external inductor (330µH) consumes significant board space
+* Not adjustable; requires different part number for other voltages
+* Higher quiescent current (5mA typical for I<sub>Q</sub> + 2.5mA for I<sub>adj</sub>) than modern switchers
+
+---
+
+**Choice:** **Option 1: LM2940T-3.3 LDO Regulator**
+
+**Rationale:** For the main power rail, wide input voltage capability is more critical than board space or efficiency. The LM2940T-3.3 accepts 9V or 12V directly, eliminating the need for different regulators across variants. Its low dropout (0.63V) ensures steady 3.3V output even if input voltage dips. The 1A capacity powers the entire system with margin. While linear regulators waste power as heat, our typical 200mA load keeps dissipation under 1.3W—manageable with a small heatsink or vertical mounting. The TO-220 package simplifies hand assembly, and built-in reverse polarity protection saves an external diode. At $0.67 in volume, it is significantly cheaper than switching alternatives.
 
 ---
 ## **Connector Subsystem**
@@ -175,7 +203,7 @@ $0.45 each (connector) + $1.00 (housing)
 * Additional cost for housing and pins
 * More complex assembly process
 * Limited to specific wire gauges
-
+---
 ### **Option 2: Sullins PPTC Series Pin Headers**
 ![PPTC Headers](https://github.com/user-attachments/assets/23cd9246-31e1-4071-9b63-c75e32c29e7c)
 $0.32 per 10-pin strip  
