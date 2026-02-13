@@ -280,7 +280,7 @@ $0.69 each
 
 ---
 
-**Choice:** **Option 1**: Model 0930 9V 3A AC-DC Wall Power Supply
+**Choice:** **Option 1**: Model 0930 9V 3A AC-DC Wall Power Supply or both
 
 **Rationale**:
 The rover requires a dependable and precisely regulated power source for consistent operation in field conditions. This supply provides the exact 9V output needed by our voltage regulator, eliminating any additional voltage conversion circuitry. Its 3A capacity offers substantial headroom above our maximum power requirements, ensuring reliable performance under load. While a generic model without formal certifications, its universal AC input (100–240V) supports worldwide operation, and the standard barrel jack connects directly to our PJ-102AH receptacle. The balance of exact voltage matching, ample power margin, and straightforward integration justifies selecting this option for our prototyping needs.
