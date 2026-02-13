@@ -686,9 +686,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-lm2940t-33-ldo-regulator" class="md-nav__link">
+  <a href="#option-1-lm1085isx-33-nopb-ldo-regulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1: LM2940T-3.3 LDO Regulator
+      Option 1: LM1085ISX-3.3-NOPB LDO Regulator
     </span>
   </a>
   
@@ -1116,9 +1116,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-lm2940t-33-ldo-regulator" class="md-nav__link">
+  <a href="#option-1-lm1085isx-33-nopb-ldo-regulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1: LM2940T-3.3 LDO Regulator
+      Option 1: LM1085ISX-3.3-NOPB LDO Regulator
     </span>
   </a>
   
@@ -1302,27 +1302,30 @@ Components:
 <p><strong>Rationale:</strong> The underwater rover application demands a waterproof sensor, which commercial light sensors do not provide without significant modification. The custom GL5528 solution allows us to create a fully submersible sensor (IP68 rating) specifically optimized for underwater light penetration, where blue-green wavelengths (450-550nm) dominate. While requiring more initial design effort, this approach provides better long-term reliability underwater, allows customization for our specific depth and water conditions. The total cost ($3.50) remains reasonable compared to commercial underwater sensors (typically $50+), and the design can be easily scaled for multiple rover units.</p>
 <hr>
 <h2 id="33v-power-regulation-subsystem"><strong>3.3V Power Regulation Subsystem</strong></h2>
-<h3 id="option-1-lm2940t-33-ldo-regulator"><strong>Option 1: LM2940T-3.3 LDO Regulator</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/4402b0fa-46ec-4bc7-a2eb-654e49398680" data-desc-position="bottom"><img alt="LM2940T" src="https://github.com/user-attachments/assets/4402b0fa-46ec-4bc7-a2eb-654e49398680"></a></p>
-<p><strong>$0.6667 each</strong> 
-<a href="https://www.digikey.com/en/products/detail/taejin/LM2940T-3.3/22237350">DigiKey: LM2940T-3.3 LDO Regulator</a></p>
+<h3 id="option-1-lm1085isx-33-nopb-ldo-regulator"><strong>Option 1: LM1085ISX-3.3-NOPB LDO Regulator</strong></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/c201f543-9108-4bdd-a9b2-2cd5053df6d5" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/c201f543-9108-4bdd-a9b2-2cd5053df6d5"></a></p>
+<p><strong>$3.45 each</strong><br>
+<a href="https://www.digikey.com/en/products/detail/texas-instruments/LM1085ISX-3-3-NOPB/366710">DigiKey: LM1085ISX-3.3-NOPB LDO Regulator</a> </p>
 <p><strong>Pros</strong>
-* <strong>Very low dropout voltage</strong>: 0.63V max at 1A – operates from 4V input for 3.3V out
-* Wide input voltage range up to <strong>26V</strong>, ideal for 9V/12V/24V systems
-* <strong>1A output current</strong> capability, sufficient for most sensor + MCU loads
-* Through-hole TO-220 package, easy for breadboarding and hand-wiring
-* <strong>Quiescent current only 500µA</strong> typical – better than LM78xx family
-* Built-in protection: over-current, over-temperature, <strong>reverse polarity</strong>
-* Operating temperature range: -40°C to +125°C, suitable for industrial use
-* Low price point at volume: $0.67 in 100-piece tubes</p>
+- <strong>Surface-mount D²PAK (TO-263) package</strong> – meets our SMD assembly requirements, no through-hole parts
+- High output current: <strong>3A</strong> continuous, ample headroom for all sensors + MCU + peripherals
+- Low dropout voltage: <strong>1.3V max at 3A</strong> – operates from 4.6V input for 3.3V out
+- Fixed 3.3V output, no adjustment resistors needed
+- Wide input voltage range: up to <strong>27V</strong> – compatible with 9V/12V/24V systems
+- Excellent line/load regulation: 0.015% typical
+- Built-in protection: thermal shutdown, current limit, safe area protection
+- Low quiescent current: <strong>5mA typical</strong> at full load
+- Stable with low-ESR ceramic output capacitors
+- Industry-standard D²PAK footprint, compatible with reflow soldering</p>
 <p><strong>Cons</strong>
-* <strong>Marketplace product</strong>: Ships from Taejin (not DigiKey stock), ~7 day handling + possible $89 flat fee for small orders
-* <strong>Not a low-noise LDO</strong> – output noise and PSRR unspecified, not optimized for sensitive analog
-* Fixed 3.3V only, no adjustable version available
-* Larger through-hole package consumes more board space than SOT-23 LDOs
-* Efficiency still linear: ~37% at 9V in, 1A out = 5.7W heat – <strong>requires heatsink</strong>
-* Higher dropout than modern LDOs (AP2112 is 1.3V, but this needs less headroom)
-* 25mA max supply current at no load is higher than some competitors</p>
+- <strong>Higher cost</strong>: $3.45 – significantly more expensive than AP2112 or LM2940
+- Still a <strong>linear regulator</strong>: efficiency only ~37% with 9V input at 3.3V out
+- <strong>Significant heat dissipation at high current</strong>: 3A load = 17.1W power dissipation – requires <strong>heatsinking even in SMD package</strong>
+- Larger SMD package than SOT-23 LDOs, consumes more PCB area
+- Not adjustable; fixed 3.3V version only
+- Higher quiescent current than modern CMOS LDOs (AP2112: 60µA)
+- Overkill for low-power sensor applications (600mA vs our ~200mA load)
+- D²PAK requires proper PCB copper pour for thermal management</p>
 <hr>
 <h3 id="option-2-lm7805ct-nopb-linear-regulator"><strong>Option 2: LM7805CT-NOPB Linear Regulator</strong></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301" data-desc-position="bottom"><img alt="LM7805CT" src="https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301"></a></p>
@@ -1372,8 +1375,8 @@ gived in class
 * Not adjustable; requires different part number for other voltages
 * Higher quiescent current (5mA typical for I<sub>Q</sub> + 2.5mA for I<sub>adj</sub>) than modern switchers</p>
 <hr>
-<p><strong>Choice:</strong> <strong>Option 1: LM2940T-3.3 LDO Regulator</strong></p>
-<p><strong>Rationale:</strong> For the main power rail, wide input voltage capability is more critical than board space or efficiency. The LM2940T-3.3 accepts 9V or 12V directly, eliminating the need for different regulators across variants. Its low dropout (0.63V) ensures steady 3.3V output even if input voltage dips. The 1A capacity powers the entire system with margin. While linear regulators waste power as heat, our typical 200mA load keeps dissipation under 1.3W—manageable with a small heatsink or vertical mounting. The TO-220 package simplifies hand assembly, and built-in reverse polarity protection saves an external diode. At $0.67 in volume, it is significantly cheaper than switching alternatives.</p>
+<p><strong>Choice:</strong> <strong>Option 1: LM1085ISX-3.3-NOPB LDO Regulator</strong></p>
+<p><strong>Rationale:</strong> Surface-mount compatibility is the primary requirement for our power rail. The LM1085ISX-3.3-NOPB comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 3A output provides substantial headroom for all sensors and the microcontroller. While it is a linear regulator, our typical 200mA load keeps dissipation under 1.3W—manageable with proper PCB copper pouring. Built-in thermal shutdown and current limit protect against faults. Although the $3.45 unit cost is higher than through-hole alternatives, this part eliminates manual soldering and keeps our bill of materials fully surface-mount.</p>
 <hr>
 <h2 id="connector-subsystem"><strong>Connector Subsystem</strong></h2>
 <h3 id="option-1-jst-xh-series-3-pin-connectors"><strong>Option 1: JST XH Series 3-Pin Connectors</strong></h3>
