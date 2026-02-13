@@ -82,32 +82,34 @@ Components:
 
 ## **3.3V Power Regulation Subsystem** 
 
-### **Option 1: LM2940T-3.3 LDO Regulator**
+### **Option 1: LM1085ISX-3.3-NOPB LDO Regulator**
+![Image](https://github.com/user-attachments/assets/c201f543-9108-4bdd-a9b2-2cd5053df6d5)
 
-![LM2940T](https://github.com/user-attachments/assets/4402b0fa-46ec-4bc7-a2eb-654e49398680)
+**$3.45 each**  
+[DigiKey: LM1085ISX-3.3-NOPB LDO Regulator](https://www.digikey.com/en/products/detail/texas-instruments/LM1085ISX-3-3-NOPB/366710) 
 
-
-**$0.6667 each** 
-[DigiKey: LM2940T-3.3 LDO Regulator](https://www.digikey.com/en/products/detail/taejin/LM2940T-3.3/22237350)
 
 **Pros**
-* **Very low dropout voltage**: 0.63V max at 1A – operates from 4V input for 3.3V out
-* Wide input voltage range up to **26V**, ideal for 9V/12V/24V systems
-* **1A output current** capability, sufficient for most sensor + MCU loads
-* Through-hole TO-220 package, easy for breadboarding and hand-wiring
-* **Quiescent current only 500µA** typical – better than LM78xx family
-* Built-in protection: over-current, over-temperature, **reverse polarity**
-* Operating temperature range: -40°C to +125°C, suitable for industrial use
-* Low price point at volume: $0.67 in 100-piece tubes
+- **Surface-mount D²PAK (TO-263) package** – meets our SMD assembly requirements, no through-hole parts
+- High output current: **3A** continuous, ample headroom for all sensors + MCU + peripherals
+- Low dropout voltage: **1.3V max at 3A** – operates from 4.6V input for 3.3V out
+- Fixed 3.3V output, no adjustment resistors needed
+- Wide input voltage range: up to **27V** – compatible with 9V/12V/24V systems
+- Excellent line/load regulation: 0.015% typical
+- Built-in protection: thermal shutdown, current limit, safe area protection
+- Low quiescent current: **5mA typical** at full load
+- Stable with low-ESR ceramic output capacitors
+- Industry-standard D²PAK footprint, compatible with reflow soldering
 
 **Cons**
-* **Marketplace product**: Ships from Taejin (not DigiKey stock), ~7 day handling + possible $89 flat fee for small orders
-* **Not a low-noise LDO** – output noise and PSRR unspecified, not optimized for sensitive analog
-* Fixed 3.3V only, no adjustable version available
-* Larger through-hole package consumes more board space than SOT-23 LDOs
-* Efficiency still linear: ~37% at 9V in, 1A out = 5.7W heat – **requires heatsink**
-* Higher dropout than modern LDOs (AP2112 is 1.3V, but this needs less headroom)
-* 25mA max supply current at no load is higher than some competitors
+- **Higher cost**: $3.45 – significantly more expensive than AP2112 or LM2940
+- Still a **linear regulator**: efficiency only ~37% with 9V input at 3.3V out
+- **Significant heat dissipation at high current**: 3A load = 17.1W power dissipation – requires **heatsinking even in SMD package**
+- Larger SMD package than SOT-23 LDOs, consumes more PCB area
+- Not adjustable; fixed 3.3V version only
+- Higher quiescent current than modern CMOS LDOs (AP2112: 60µA)
+- Overkill for low-power sensor applications (600mA vs our ~200mA load)
+- D²PAK requires proper PCB copper pour for thermal management
 
 ---
 
@@ -175,11 +177,12 @@ gived in class
 
 ---
 
-**Choice:** **Option 1: LM2940T-3.3 LDO Regulator**
+**Choice:** **Option 1: LM1085ISX-3.3-NOPB LDO Regulator**
 
-**Rationale:** For the main power rail, wide input voltage capability is more critical than board space or efficiency. The LM2940T-3.3 accepts 9V or 12V directly, eliminating the need for different regulators across variants. Its low dropout (0.63V) ensures steady 3.3V output even if input voltage dips. The 1A capacity powers the entire system with margin. While linear regulators waste power as heat, our typical 200mA load keeps dissipation under 1.3W—manageable with a small heatsink or vertical mounting. The TO-220 package simplifies hand assembly, and built-in reverse polarity protection saves an external diode. At $0.67 in volume, it is significantly cheaper than switching alternatives.
+**Rationale:** Surface-mount compatibility is the primary requirement for our power rail. The LM1085ISX-3.3-NOPB comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 3A output provides substantial headroom for all sensors and the microcontroller. While it is a linear regulator, our typical 200mA load keeps dissipation under 1.3W—manageable with proper PCB copper pouring. Built-in thermal shutdown and current limit protect against faults. Although the $3.45 unit cost is higher than through-hole alternatives, this part eliminates manual soldering and keeps our bill of materials fully surface-mount.
 
 ---
+
 ## **Connector Subsystem**
 
 ### **Option 1: JST XH Series 3-Pin Connectors**
