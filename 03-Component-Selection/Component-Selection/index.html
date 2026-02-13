@@ -15,7 +15,7 @@
         <link rel="prev" href="../../02-Block-Diagram/Block-Diagram/">
       
       
-        <link rel="next" href="../../03a-Power%20Budget%20/Power_Budget/">
+        <link rel="next" href="../../03b-Microcontroller%20selection/ESP%2032/">
       
       
       <link rel="icon" href="../../static/logo314.png">
@@ -267,26 +267,6 @@
     
   
   03 Component Selection
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../03a-Power%20Budget%20/Power_Budget/" class="md-tabs__link">
-          
-  
-    
-  
-  03a Power Budget 
 
         </a>
       </li>
@@ -695,9 +675,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-lm1085isx-33-nopb-ldo-regulator" class="md-nav__link">
+  <a href="#option-2-lm7805ct-nopb-linear-regulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 2: LM1085ISX-3.3-NOPB LDO Regulator
+      Option 2: LM7805CT-NOPB Linear Regulator
     </span>
   </a>
   
@@ -794,52 +774,6 @@
             
           </ul>
         </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../03a-Power%20Budget%20/Power_Budget/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    03a Power Budget 
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
       
     </li>
   
@@ -1125,9 +1059,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-lm1085isx-33-nopb-ldo-regulator" class="md-nav__link">
+  <a href="#option-2-lm7805ct-nopb-linear-regulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 2: LM1085ISX-3.3-NOPB LDO Regulator
+      Option 2: LM7805CT-NOPB Linear Regulator
     </span>
   </a>
   
@@ -1324,31 +1258,28 @@ Components:
 * Higher dropout than modern LDOs (AP2112 is 1.3V, but this needs less headroom)
 * 25mA max supply current at no load is higher than some competitors</p>
 <hr>
-<h3 id="option-2-lm1085isx-33-nopb-ldo-regulator"><strong>Option 2: LM1085ISX-3.3-NOPB LDO Regulator</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/00388646-3ef4-4e4c-880e-98fa5f9d46c4" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/00388646-3ef4-4e4c-880e-98fa5f9d46c4"></a></p>
-<p><strong>$3.45 each</strong><br>
-<a href="https://www.digikey.com/en/products/detail/texas-instruments/LM1085ISX-3-3-NOPB/366710">DigiKey: LM1085ISX-3.3-NOPB LDO Regulator</a> </p>
-<hr>
+<h3 id="option-2-lm7805ct-nopb-linear-regulator"><strong>Option 2: LM7805CT-NOPB Linear Regulator</strong></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301" data-desc-position="bottom"><img alt="LM7805CT" src="https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301"></a></p>
+<p><strong>$1.80 each</strong></p>
+<p><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM7805CT-NOPB/3901929">DigiKey: LM7805CT-NOPB Linear Regulator</a></p>
 <p><strong>Pros</strong>
-- <strong>Surface-mount D²PAK (TO-263) package</strong> – meets our SMD assembly requirements, no through-hole parts
-- High output current: <strong>3A</strong> continuous, ample headroom for all sensors + MCU + peripherals
-- Low dropout voltage: <strong>1.3V max at 3A</strong> – operates from 4.6V input for 3.3V out
-- Fixed 3.3V output, no adjustment resistors needed
-- Wide input voltage range: up to <strong>27V</strong> – compatible with 9V/12V/24V systems
-- Excellent line/load regulation: 0.015% typical
-- Built-in protection: thermal shutdown, current limit, safe area protection
-- Low quiescent current: <strong>5mA typical</strong> at full load
-- Stable with low-ESR ceramic output capacitors
-- Industry-standard D²PAK footprint, compatible with reflow soldering</p>
+* Very rugged and proven design with decades of field history
+* Wide input voltage range (7V to 25V) ideal for 9V battery/supply operation
+* High output current capability (1.5A max) for powering multiple sensors
+* Excellent thermal shutdown and short-circuit protection built-in
+* Through-hole TO-220 package is extremely easy to prototype on breadboards
+* No external passives required for basic operation
+* Industry-standard pinout, widely available and second-sourced
+* Junction temperature range up to +125°C for robust operation</p>
 <p><strong>Cons</strong>
-- <strong>Higher cost</strong>: $3.45 – significantly more expensive than AP2112 or LM2940
-- Still a <strong>linear regulator</strong>: efficiency only ~37% with 9V input at 3.3V out
-- <strong>Significant heat dissipation at high current</strong>: 3A load = 17.1W power dissipation – requires <strong>heatsinking even in SMD package</strong>
-- Larger SMD package than SOT-23 LDOs, consumes more PCB area
-- Not adjustable; fixed 3.3V version only
-- Higher quiescent current than modern CMOS LDOs (AP2112: 60µA)
-- Overkill for low-power sensor applications (600mA vs our ~200mA load)
-- D²PAK requires proper PCB copper pour for thermal management</p>
+* Much higher dropout voltage (2V) requires minimum 7V input for 5V out
+* Linear efficiency only ~55% at 9V input (worse than AP2112 for lower Vout)
+* Large through-hole package consumes significant board space
+* No adjustable version; fixed 5.0V output only
+* Significant heat generation: at 500mA load with 9V input, power dissipation is 2W
+* Requires heatsink for currents above ~300mA in ambient temperatures
+* Higher quiescent current (5mA typical) than modern LDOs or switchers
+* Output noise and ripple rejection inferior to low-noise LDOs for analog circuits</p>
 <hr>
 <h3 id="option-3-lm2575t-33g-switching-regulator"><strong>Option 3: LM2575T-3.3G Switching Regulator</strong></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/26bf1b16-a4f2-4a0a-b779-7738411228d3" data-desc-position="bottom"><img alt="LM2575T" src="https://github.com/user-attachments/assets/26bf1b16-a4f2-4a0a-b779-7738411228d3"></a></p>
@@ -1375,13 +1306,13 @@ gived in class
 * Not adjustable; requires different part number for other voltages
 * Higher quiescent current (5mA typical for I<sub>Q</sub> + 2.5mA for I<sub>adj</sub>) than modern switchers</p>
 <hr>
-<p><strong>Choice:</strong> <strong>Option 2: LM2940T-3.3 LDO Regulator</strong></p>
-<p><strong>Rationale:</strong> For the main power rail, wide input voltage capability is more critical than board space or efficiency. The LM2940T-3.3 accepts 9V or 12V directly, eliminating the need for different regulators across variants. Its low dropout (0.63V) ensures steady 3.3V output even if input voltage dips. The 1A capacity powers the entire system with margin. While linear regulators waste power as heat, our typical 200mA load keeps dissipation under 1.3W—manageable with a small heatsink. The TO-220 package simplifies hand assembly, and built-in reverse polarity protection saves an external diode. At $0.67 in volume, it is significantly cheaper than switching alternatives. This is a through-hole part, but a pin-compatible SMD version (LM2940S-3.3) is available for the final PCB revision.</p>
+<p><strong>Choice:</strong> <strong>Option 1: LM2940T-3.3 LDO Regulator</strong></p>
+<p><strong>Rationale:</strong> For the main power rail, wide input voltage capability is more critical than board space or efficiency. The LM2940T-3.3 accepts 9V or 12V directly, eliminating the need for different regulators across variants. Its low dropout (0.63V) ensures steady 3.3V output even if input voltage dips. The 1A capacity powers the entire system with margin. While linear regulators waste power as heat, our typical 200mA load keeps dissipation under 1.3W—manageable with a small heatsink or vertical mounting. The TO-220 package simplifies hand assembly, and built-in reverse polarity protection saves an external diode. At $0.67 in volume, it is significantly cheaper than switching alternatives.</p>
 <hr>
 <h2 id="connector-subsystem"><strong>Connector Subsystem</strong></h2>
 <h3 id="option-1-jst-xh-series-3-pin-connectors"><strong>Option 1: JST XH Series 3-Pin Connectors</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d8b40aae-004c-40d3-8930-7b5fc257a02f" data-desc-position="bottom"><img alt="JST XH" src="https://github.com/user-attachments/assets/d8b40aae-004c-40d3-8930-7b5fc257a02f"></a></p>
-<p>$0.45 each (connector) + $1.00 (housing)<br>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d8b40aae-004c-40d3-8930-7b5fc257a02f" data-desc-position="bottom"><img alt="JST XH" src="https://github.com/user-attachments/assets/d8b40aae-004c-40d3-8930-7b5fc257a02f"></a>
+$0.45 each (connector) + $1.00 (housing)<br>
 <a href="https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A-LF-SN/1651037">DigiKey: JST XH 3-Pin Connector</a></p>
 <p><strong>Pros</strong>
 * Polarized design prevents incorrect connection
@@ -1399,8 +1330,8 @@ gived in class
 * Limited to specific wire gauges</p>
 <hr>
 <h3 id="option-2-sullins-pptc-series-pin-headers"><strong>Option 2: Sullins PPTC Series Pin Headers</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/23cd9246-31e1-4071-9b63-c75e32c29e7c" data-desc-position="bottom"><img alt="PPTC Headers" src="https://github.com/user-attachments/assets/23cd9246-31e1-4071-9b63-c75e32c29e7c"></a></p>
-<p>$0.32 per 10-pin strip<br>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/23cd9246-31e1-4071-9b63-c75e32c29e7c" data-desc-position="bottom"><img alt="PPTC Headers" src="https://github.com/user-attachments/assets/23cd9246-31e1-4071-9b63-c75e32c29e7c"></a>
+$0.32 per 10-pin strip<br>
 <a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC101LFBN-RC/810149">DigiKey: Sullins PPTC101LFBN-RC Header</a></p>
 <p><strong>Pros</strong>
 * Very low cost per connection
@@ -1439,8 +1370,8 @@ gived in class
 * May generate electrical noise that could interfere with sensitive analog circuits
 * Fixed output voltage cannot be adjusted if design changes require different voltage</p>
 <h3 id="option-2-kycon-kldx-0202-b-c-smd-barrel-jack"><strong>Option 2: Kycon KLDX-0202-B-C SMD Barrel Jack</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/77b86c58-60cf-477f-b2a5-bb5c0fa8d8db" data-desc-position="bottom"><img alt="KLDX-0202" src="https://github.com/user-attachments/assets/77b86c58-60cf-477f-b2a5-bb5c0fa8d8db"></a></p>
-<p>$0.69 each<br>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/77b86c58-60cf-477f-b2a5-bb5c0fa8d8db" data-desc-position="bottom"><img alt="KLDX-0202" src="https://github.com/user-attachments/assets/77b86c58-60cf-477f-b2a5-bb5c0fa8d8db"></a>
+$0.69 each<br>
 <a href="https://www.digikey.com/en/products/detail/kycon-inc/KLDX-0202-BC/9990097?s=N4IgTCBcDaINIE8DGB7AdgAjgGQCIA0BaABjFMICFCBhEAXQF8g">DigiKey: Kycon KLDX-0202 SMD Barrel Jack</a></p>
 <p><strong>Pros</strong>
 * SMD mounting compatible with automated assembly
@@ -1516,13 +1447,13 @@ The rover requires a dependable and precisely regulated power source for consist
         
         
           
-          <a href="../../03a-Power%20Budget%20/Power_Budget/" class="md-footer__link md-footer__link--next" aria-label="Next: Power Budget">
+          <a href="../../03b-Microcontroller%20selection/ESP%2032/" class="md-footer__link md-footer__link--next" aria-label="Next: ESP 32">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Power Budget
+                ESP 32
               </div>
             </div>
             <div class="md-footer__button md-icon">
