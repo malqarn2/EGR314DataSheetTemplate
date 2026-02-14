@@ -689,9 +689,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-microcontroller-research-esp32-wroom-32d" class="md-nav__link">
+  <a href="#2-microcontroller-research-esp32-s3-wroom-1-n4" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Microcontroller Research: ESP32-WROOM-32D
+      2. Microcontroller Research: ESP32-S3-WROOM-1-N4
     </span>
   </a>
   
@@ -701,15 +701,6 @@
   <a href="#3-pinout-support-for-photoresistor-uart" class="md-nav__link">
     <span class="md-ellipsis">
       3. Pinout Support for Photoresistor &amp; UART
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#figure-1-esp32-wroom-32d-pinout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Figure 1: ESP32-WROOM-32D pinout.
     </span>
   </a>
   
@@ -737,6 +728,15 @@
   <a href="#6-team-role-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
       6. Team Role &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-final-microcontroller-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Final Microcontroller Choice
     </span>
   </a>
   
@@ -986,9 +986,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-microcontroller-research-esp32-wroom-32d" class="md-nav__link">
+  <a href="#2-microcontroller-research-esp32-s3-wroom-1-n4" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Microcontroller Research: ESP32-WROOM-32D
+      2. Microcontroller Research: ESP32-S3-WROOM-1-N4
     </span>
   </a>
   
@@ -998,15 +998,6 @@
   <a href="#3-pinout-support-for-photoresistor-uart" class="md-nav__link">
     <span class="md-ellipsis">
       3. Pinout Support for Photoresistor &amp; UART
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#figure-1-esp32-wroom-32d-pinout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Figure 1: ESP32-WROOM-32D pinout.
     </span>
   </a>
   
@@ -1034,6 +1025,15 @@
   <a href="#6-team-role-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
       6. Team Role &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-final-microcontroller-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Final Microcontroller Choice
     </span>
   </a>
   
@@ -1116,12 +1116,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="2-microcontroller-research-esp32-wroom-32d"><strong>2. Microcontroller Research: ESP32-WROOM-32D</strong></h2>
+<h2 id="2-microcontroller-research-esp32-s3-wroom-1-n4"><strong>2. Microcontroller Research: ESP32-S3-WROOM-1-N4</strong></h2>
 <table>
 <thead>
 <tr>
 <th>Feature</th>
-<th>ESP32-WROOM-32D Specification</th>
+<th>ESP32-S3-WROOM-1-N4 Specification</th>
 <th>Project Requirement</th>
 <th>Status</th>
 </tr>
@@ -1135,19 +1135,19 @@
 </tr>
 <tr>
 <td><strong>ADC Channels</strong></td>
-<td>18 channels (12-bit SAR)</td>
+<td>20 channels (12-bit SAR)</td>
 <td>1 channel for photoresistor</td>
 <td><strong>Exceeds</strong></td>
 </tr>
 <tr>
 <td><strong>UART Interfaces</strong></td>
-<td>3 UART controllers</td>
+<td>5 UART controllers</td>
 <td>1 for subsystem communication</td>
 <td><strong>Exceeds</strong></td>
 </tr>
 <tr>
 <td><strong>GPIO Pins</strong></td>
-<td>34 programmable GPIOs</td>
+<td>36 programmable GPIOs</td>
 <td>Minimum 3 required</td>
 <td><strong>Exceeds</strong></td>
 </tr>
@@ -1159,7 +1159,7 @@
 </tr>
 <tr>
 <td><strong>WiFi/Bluetooth</strong></td>
-<td>Bluetooth 4.2</td>
+<td>WiFi + Bluetooth 5 LE</td>
 <td>Required for data transmission</td>
 <td><strong>Meets</strong></td>
 </tr>
@@ -1171,7 +1171,7 @@
 </tr>
 <tr>
 <td><strong>SRAM</strong></td>
-<td>520KB</td>
+<td>512KB</td>
 <td>More than sufficient</td>
 <td><strong>Exceeds</strong></td>
 </tr>
@@ -1190,10 +1190,73 @@
 </tbody>
 </table>
 <h2 id="3-pinout-support-for-photoresistor-uart">3. Pinout Support for Photoresistor &amp; UART</h2>
-<p><strong>Source:</strong> ESP32-WROOM-32D Datasheet, Section 2: Pin Definitions, Table 2<br>
-<strong>Link:</strong> <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf">ESP32-WROOM-32D Datasheet (Espressif)</a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/8ef3b636-0148-4625-af39-ad307d949317" data-desc-position="bottom"><img width="505" height="525" alt="Image" src="https://github.com/user-attachments/assets/8ef3b636-0148-4625-af39-ad307d949317"></a></p>
-<h2 id="figure-1-esp32-wroom-32d-pinout"><em>Figure 1: ESP32-WROOM-32D pinout.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Pin Name</th>
+<th>Function</th>
+<th>Our Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td>Ground</td>
+<td>Power ground</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3V3</td>
+<td>3.3V Power</td>
+<td>Sensor power</td>
+</tr>
+<tr>
+<td>3</td>
+<td>EN</td>
+<td>Enable</td>
+<td>Programming/Reset</td>
+</tr>
+<tr>
+<td>4</td>
+<td>GPIO4</td>
+<td>ADC1_CH3</td>
+<td>Photoresistor analog input</td>
+</tr>
+<tr>
+<td>37</td>
+<td>GPIO16</td>
+<td>UART2_RXD</td>
+<td>UART RX from rover</td>
+</tr>
+<tr>
+<td>38</td>
+<td>GPIO17</td>
+<td>UART2_TXD</td>
+<td>UART TX to rover</td>
+</tr>
+<tr>
+<td>43</td>
+<td>GPIO43</td>
+<td>UART0_TXD</td>
+<td>Programming TX</td>
+</tr>
+<tr>
+<td>44</td>
+<td>GPIO44</td>
+<td>UART0_RXD</td>
+<td>Programming RX</td>
+</tr>
+<tr>
+<td>39</td>
+<td>GND</td>
+<td>Ground</td>
+<td>Ground</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/348c103f-a8e3-45bc-8ea1-3f4d0d0cc7e4" data-desc-position="bottom"><img width="551" height="677" alt="Image" src="https://github.com/user-attachments/assets/348c103f-a8e3-45bc-8ea1-3f4d0d0cc7e4"></a></p>
 <h2 id="4-adc-channels-for-analog-light-sensing">4. ADC Channels for Analog Light Sensing</h2>
 <p><strong>Source:</strong> ESP32-WROOM-32D Datasheet, Section 4.4: ADC<br>
 <strong>Relevant Excerpt:</strong></p>
@@ -1210,13 +1273,12 @@
 </thead>
 <tbody>
 <tr>
-<td>ADC1_CH0</td>
-<td>GPIO36</td>
+<td>ADC1_CH3</td>
+<td>GPIO4</td>
 <td>Photoresistor analog input</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Why this matters:</strong> ADC1 is not shared with the WiFi radio, ensuring clean, stable light sensor readings even during wireless transmission.</p>
 <hr>
 <h2 id="5-uart-interfaces-for-subsystem-communication">5. UART Interfaces for Subsystem Communication</h2>
 <p><strong>Source:</strong> ESP32-WROOM-32D Datasheet, Section 4.6: UART<br>
@@ -1236,8 +1298,8 @@
 <tbody>
 <tr>
 <td>UART2</td>
-<td>GPIO17</td>
-<td>GPIO16</td>
+<td>GPIO1</td>
+<td>GPIO3</td>
 <td>Communication with other rover subsystems</td>
 </tr>
 </tbody>
@@ -1246,7 +1308,10 @@
 <hr>
 <h2 id="6-team-role-responsibilities">6. Team Role &amp; Responsibilities</h2>
 <p><strong>Role:</strong> Sensors and Communication Subsystem Lead</p>
-<p><strong>Responsibilities:</strong> I am responsible for the design, implementation, and integration of the photoresistor-based ambient light sensing system and the inter-subsystem UART communication link. For sensing, I selected a photoresistor voltage divider circuit interfaced to the ESP32's ADC1_CH0 (GPIO36), utilizing the 12-bit SAR ADC with WiFi-isolated channels to ensure noise-free analog readings.</p>
+<p><strong>Responsibilities:</strong> I am responsible for the design, implementation, and integration of the photoresistor-based ambient light sensing system and the inter-subsystem UART communication link using the ESP32-S3-WROOM-1-N4 module.</p>
+<h2 id="7-final-microcontroller-choice">7. Final Microcontroller Choice</h2>
+<p><strong>My Selection:</strong> ESP32-S3-WROOM-1-N4</p>
+<p><strong>Rationale:</strong> This microcontroller meets all project requirements with significant excess capacity. It provides 20 ADC channels (only 1 needed), 5 UART controllers (only 1 needed), and 36 GPIO pins (only 9 needed). The built-in USB programming eliminates need for external programmers, and ADC1 channels are isolated from WiFi interference for clean sensor readings.</p>
 
 
 
