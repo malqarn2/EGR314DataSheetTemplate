@@ -49,10 +49,11 @@ $2.98 each
 
 ### **Option 3: Custom NORPS-12 Photoresistor Circuit with Interproof Housing**
 ![NORPS-12](https://github.com/user-attachments/assets/d759ffec-ff5a-4386-b96d-5fd0942f2448)
+
 $2.23
 
 Components:
-- NORPS-12 Photoresistor: $1.50 [Digikey: NORPS-12 Photoresistor](https://www.digikey.com/en/products/detail/advanced-photonix/NORPS-12/5039796?s=N4IgTCBcDaIHIHkBKAFAygWgIwQLoF8g)
+- NORPS-12 Photoresistor: [Digikey: NORPS-12 Photoresistor](https://www.digikey.com/en/products/detail/advanced-photonix/NORPS-12/5039796?s=N4IgTCBcDaIHIHkBKAFAygWgIwQLoF8g)
 
 **Pros**
 - Can achieve IP68 waterproof rating for reliable underwater operation
