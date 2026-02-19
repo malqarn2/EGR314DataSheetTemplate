@@ -83,6 +83,7 @@ Components:
 **Choice:** **Option 3: Custom NORPS-12 Photoresistor Circuit with Interproof Housing**
 
 **Rationale:** The underwater rover application requires a waterproof light sensor. The custom NORPS-12 solution enables an IP68-rated submersible sensor optimized for blue-green wavelengths (550nm peak) that dominate underwater. This provides superior spectral matching for underwater conditions, wide temperature range (-60°C to 75°C), and high voltage protection (250Vpk). Total cost ($2.23) is significantly lower than commercial underwater sensors ($50+), and the design can be easily scaled for multiple rover units.
+
 ---
 
 ## **3.3V Power Regulation Subsystem** 
