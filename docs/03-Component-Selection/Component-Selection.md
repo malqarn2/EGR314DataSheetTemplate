@@ -47,37 +47,41 @@ $2.98 each
 * SMD package (2.0×2.4mm) is smaller than recommended 0805 size
 * Limited availability and longer lead times reported
 
-### **Option 3: Custom GL5528 Photoresistor Circuit with Waterproof Housing**
-![GL5528](https://github.com/user-attachments/assets/b1d07783-6e8e-4130-ad6d-9422af8b44d4)  
-~$3.50 estimated BOM cost (excluding labor)
+### **Option 3: Custom NORPS-12 Photoresistor Circuit with Interproof Housing**
+![NORPS-12](https://github.com/user-attachments/assets/d759ffec-ff5a-4386-b96d-5fd0942f2448)
+$2.23
+
 Components:
-- GL5528 Photoresistor: $0.75 [DigiKey: GL5528 Photoresistor](https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&gad_source=1&gad_campaignid=20232005509&gbraid=0AAAAADrbLlj1fnVHDFXcm9ZQE3CLO1GPB&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgn8fMz6UXPT-uEfW5XfMAOu1Ybf4zwVPDRpQ6ir3dRp-_qCq7aVhvcaAkxmEALw_wcB)
-- Waterproof housing materials: ~$1.00
+- NORPS-12 Photoresistor: $1.50 [Digikey: NORPS-12 Photoresistor](https://www.digikey.com/en/products/detail/advanced-photonix/NORPS-12/5039796?s=N4IgTCBcDaIHIHkBKAFAygWgIwQLoF8g)
 
 **Pros**
-* Can achieve IP68 waterproof rating for reliable underwater operation
-* Customizable spectral filtering for underwater light conditions (blue-green)
-* Uses 0805 SMD resistors/capacitors meeting EGR 314 requirements
-* Lower unit cost than commercial underwater-specific sensors
-* Buffered output provides stable 0-3.3V range for microcontroller ADC
-* Easy to calibrate for specific water turbidity and depth conditions
-* Mechanical design can be optimized for rover mounting and cleaning
+- Can achieve IP68 waterproof rating for reliable underwater operation
+- Customizable spectral filtering for underwater light conditions (550nm peak matches blue-green water penetration)
+- Uses 8085 SMD resistors/capacitors meeting ECR 314 requirements
+- Lower unit cost than commercial underwater-specific sensors
+- Buffered output provides stable 0-3.3V range for microcontroller ADC
+- Easy to calibrate for specific water turbidity and depth conditions
+- Mechanical design can be optimized for rover mounting and cleaning
+- Wide operating temperature range (-60°C to 75°C) for extreme environments
+- High voltage rating (250Vpk) provides robust protection against electrical transients
+- Fast response time suitable for dynamic underwater lighting changes
 
 **Cons**
-* Requires custom PCB design, assembly, and testing time
-* Needs individual calibration of each sensor unit
-* Waterproofing adds mechanical complexity and assembly steps
-* Larger overall footprint than commercial SMD sensors
-* Requires epoxy potting process with potential reliability concerns
-* Temperature compensation must be implemented in software
-* Longer development timeline compared to off-the-shelf solutions
+- Requires custom PCB design, assembly, and testing time
+- Needs individual calibration of each sensor unit
+- Waterproofing adds mechanical complexity and assembly steps
+- Larger overall footprint than commercial SMD sensors (through-hole TO-18 package)
+- Requires epoxy potting process with potential reliability concerns
+- Temperature compensation must be implemented in software
+- Longer development timeline compared to off-the-shelf solutions
+- 10-week manufacturer lead time may impact project schedule
+- Higher component cost than standard photoresistor options
 
 ---
 
-**Choice:** **Option 3: Custom GL5528 Photoresistor Circuit with Waterproof Housing**
+**Choice:** **Option 3: Custom NORPS-12 Photoresistor Circuit with Interproof Housing**
 
-**Rationale:** The underwater rover application demands a waterproof sensor, which commercial light sensors do not provide without significant modification. The custom GL5528 solution allows us to create a fully submersible sensor (IP68 rating) specifically optimized for underwater light penetration, where blue-green wavelengths (450-550nm) dominate. While requiring more initial design effort, this approach provides better long-term reliability underwater, allows customization for our specific depth and water conditions. The total cost ($3.50) remains reasonable compared to commercial underwater sensors (typically $50+), and the design can be easily scaled for multiple rover units.
-
+**Rationale:** The underwater rover application requires a waterproof light sensor. The custom NORPS-12 solution enables an IP68-rated submersible sensor optimized for blue-green wavelengths (550nm peak) that dominate underwater. This provides superior spectral matching for underwater conditions, wide temperature range (-60°C to 75°C), and high voltage protection (250Vpk). Total cost ($2.23) is significantly lower than commercial underwater sensors ($50+), and the design can be easily scaled for multiple rover units.
 ---
 
 ## **3.3V Power Regulation Subsystem** 
