@@ -241,3 +241,31 @@ $0.69 each
 The rover requires a dependable and precisely regulated power source for consistent operation in field conditions. This supply provides the exact 9V output needed by our voltage regulator, eliminating any additional voltage conversion circuitry. Its 3A capacity offers substantial headroom above our maximum power requirements, ensuring reliable performance under load. While a generic model without formal certifications, its universal AC input (100–240V) supports worldwide operation, and the standard barrel jack connects directly to our PJ-102AH receptacle. The balance of exact voltage matching, ample power margin, and straightforward integration justifies selecting this option for our prototyping needs.
 
 ---
+
+## **New IC ADC Converter**
+
+### **ADS1115 16-Bit ADC - Precision Analog-to-Digital Converter**
+
+![Image](https://github.com/user-attachments/assets/87fdf6c6-917b-4dfc-95cb-c8518b679531)
+
+**$5.12 each**
+[ads1113 ADC Datasheet.pdf](https://github.com/user-attachments/files/25563005/ads1113.ADC.pdf)
+
+**Pros**
+* 16-bit resolution for precise measurements
+* 4 input channels (single-ended or differential)
+* Built-in amplifier (PGA) for small signals (±0.256V to ±6.144V)
+* Ultra-low power: 150μA active, 0.5μA sleep mode
+* Internal voltage reference and oscillator - no external parts needed
+* I²C interface with 4 selectable addresses
+
+**Cons**
+* More expensive than basic 10-bit or 12-bit ADCs
+* I²C only (no SPI option for faster communication)
+* Input voltage limited to VDD + 0.3V (can't read above supply)
+* Maximum 860 SPS (not for high-speed data acquisition)
+* Input impedance varies with gain setting (2.4MΩ to 10MΩ)
+*  Only 4 possible I²C addresses on one bus
+ 
+---
+
