@@ -187,57 +187,6 @@ gived in class
 
 **Rationale:** Surface-mount compatibility is the primary requirement for our power rail. The LM1085ISX-3.3-NOPB comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 3A output provides substantial headroom for all sensors and the microcontroller. While it is a linear regulator, our typical 200mA load keeps dissipation under 1.3W—manageable with proper PCB copper pouring. Built-in thermal shutdown and current limit protect against faults. Although the $3.45 unit cost is higher than through-hole alternatives, this part eliminates manual soldering and keeps our bill of materials fully surface-mount.
 
----
-
-## **Connector Subsystem**
-
-### **Option 1: JST XH Series 3-Pin Connectors**
-![JST XH](https://github.com/user-attachments/assets/d8b40aae-004c-40d3-8930-7b5fc257a02f)
-$0.45 each (connector) + $1.00 (housing)  
-[DigiKey: JST XH 3-Pin Connector](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A-LF-SN/1651037)
-
-**Pros**
-* Polarized design prevents incorrect connection
-* Locking mechanism secures connection against vibration
-* 3A current rating per contact provides good margin
-* Standard in robotics and industrial applications
-* Available with pre-crimped cables
-* Reliable and durable construction
-
-**Cons**
-* Through-hole mounting only (not SMD)
-* Requires crimping tool for custom cables
-* Larger footprint than plain headers
-* Additional cost for housing and pins
-* More complex assembly process
-* Limited to specific wire gauges
----
-### **Option 2: Sullins PPTC Series Pin Headers**
-![PPTC Headers](https://github.com/user-attachments/assets/23cd9246-31e1-4071-9b63-c75e32c29e7c)
-$0.32 per 10-pin strip  
-[DigiKey: Sullins PPTC101LFBN-RC Header](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC101LFBN-RC/810149)
-
-**Pros**
-* Very low cost per connection
-* Breakable to any pin count needed
-* Available in SMD version (PPTC091LFBN-RC)
-* Easy to prototype and modify
-* Compatible with standard jumper wires
-* Simple through-hole assembly
-
-**Cons**
-* Not polarized - can be inserted backwards
-* No locking mechanism
-* Less secure in high-vibration environments
-* Limited current rating (≈1A per pin)
-* Exposed pins can short if not careful
-* Less professional appearance
-
----
-
-**Choice:** **Option 1: JST XH Series 3-Pin Connectors**
-
-**Rationale:** The rover will operate in environments with vibration and movement, making secure connections critical. JST XH connectors provide polarization to prevent incorrect wiring, a locking mechanism to prevent disconnection, and a 3A rating that exceeds our power requirements. While through-hole and requiring a crimping tool, their reliability in robotics applications justifies the departure from SMD preference. The connectors are standard in the industry, making replacement cables readily available, and the cost remains reasonable for the reliability provided.
 
 ---
 
