@@ -750,6 +750,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#new-ic-adc-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      New IC ADC Converter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New IC ADC Converter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ads1115-16-bit-adc-precision-analog-to-digital-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADS1115 16-Bit ADC - Precision Analog-to-Digital Converter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1147,6 +1171,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#new-ic-adc-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      New IC ADC Converter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New IC ADC Converter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ads1115-16-bit-adc-precision-analog-to-digital-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADS1115 16-Bit ADC - Precision Analog-to-Digital Converter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1356,6 +1404,26 @@ $0.69 each<br>
 <p><strong>Choice:</strong> <strong>Option 1</strong>: Model 0930 9V 3A AC-DC Wall Power Supply or both</p>
 <p><strong>Rationale</strong>:
 The rover requires a dependable and precisely regulated power source for consistent operation in field conditions. This supply provides the exact 9V output needed by our voltage regulator, eliminating any additional voltage conversion circuitry. Its 3A capacity offers substantial headroom above our maximum power requirements, ensuring reliable performance under load. While a generic model without formal certifications, its universal AC input (100–240V) supports worldwide operation, and the standard barrel jack connects directly to our PJ-102AH receptacle. The balance of exact voltage matching, ample power margin, and straightforward integration justifies selecting this option for our prototyping needs.</p>
+<hr>
+<h2 id="new-ic-adc-converter"><strong>New IC ADC Converter</strong></h2>
+<h3 id="ads1115-16-bit-adc-precision-analog-to-digital-converter"><strong>ADS1115 16-Bit ADC - Precision Analog-to-Digital Converter</strong></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/87fdf6c6-917b-4dfc-95cb-c8518b679531" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/87fdf6c6-917b-4dfc-95cb-c8518b679531"></a></p>
+<p><strong>$5.12 each</strong>
+<a href="https://github.com/user-attachments/files/25563005/ads1113.ADC.pdf">ads1113 ADC Datasheet.pdf</a></p>
+<p><strong>Pros</strong>
+* 16-bit resolution for precise measurements
+* 4 input channels (single-ended or differential)
+* Built-in amplifier (PGA) for small signals (±0.256V to ±6.144V)
+* Ultra-low power: 150μA active, 0.5μA sleep mode
+* Internal voltage reference and oscillator - no external parts needed
+* I²C interface with 4 selectable addresses</p>
+<p><strong>Cons</strong>
+* More expensive than basic 10-bit or 12-bit ADCs
+* I²C only (no SPI option for faster communication)
+* Input voltage limited to VDD + 0.3V (can't read above supply)
+* Maximum 860 SPS (not for high-speed data acquisition)
+* Input impedance varies with gain setting (2.4MΩ to 10MΩ)
+*  Only 4 possible I²C addresses on one bus</p>
 <hr>
 
 
