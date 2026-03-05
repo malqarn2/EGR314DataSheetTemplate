@@ -781,18 +781,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (Example as Table)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bill of Materials (Example as Image)
+      Bill of Materials
     </span>
   </a>
   
@@ -959,18 +950,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (Example as Table)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bill of Materials (Example as Image)
+      Bill of Materials
     </span>
   </a>
   
@@ -1011,61 +993,328 @@
   <h1>Module Bill of Materials</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Written context needs to added!</p>
-<blockquote>
-<p>Pick <strong>ONLY</strong> one of the two examples show below. <strong>Remove</strong> the other example. <strong>REMOVE notations within the remaining section about being an example.</strong>  </p>
-</blockquote>
-<h2 id="bill-of-materials-example-as-table">Bill of Materials (Example as Table)</h2>
-<p><em>Table ##: An example of one approach to adding your BOM table to this section.</em></p>
+<p>This project is an ESP32-S3 based microcontroller system with integrated sensor interfaces and power regulation. The design features:</p>
+<ul>
+<li><strong>ESP32-S3-WROOM-1-N4</strong> module as the main controller with WiFi/BLE connectivity</li>
+<li><strong>ADS1115 16-bit ADC</strong> for precision analog sensor readings</li>
+<li><strong>NORPS-12 photoresistor</strong> for light detection</li>
+<li><strong>Push button inputs</strong> for user interface</li>
+<li><strong>Multiple LED indicators</strong> for status output</li>
+<li><strong>USB and barrel jack power options</strong> with built-in ESD protection</li>
+</ul>
+<h2 id="bill-of-materials">Bill of Materials</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>Part Name/Description</strong></th>
-<th style="text-align: left;"><strong>Qty</strong></th>
-<th style="text-align: left;"><strong>Unit Cost</strong></th>
-<th style="text-align: left;"><strong>Total Cost</strong></th>
-<th style="text-align: left;"><strong>Manufacture</strong></th>
-<th style="text-align: left;"><strong>Manufacturer #</strong></th>
-<th style="text-align: left;"><strong>Vendor Link</strong></th>
-<th style="text-align: left;"><strong>Datasheet Link</strong></th>
-<th style="text-align: left;"><strong>Schematic Reference Designators</strong></th>
+<th>Part Name/Description</th>
+<th>Unit Qty</th>
+<th>Per Unit Cost</th>
+<th>Total Cost</th>
+<th>Manufacturer</th>
+<th>Manufacturer Part #</th>
+<th>Supplier</th>
+<th>Vendor Part Number</th>
+<th>Supplier Link</th>
+<th>Supplier Part #</th>
+<th>Date Ordered</th>
+<th># Ordered</th>
+<th># Received</th>
+<th>Schematic Reference Designators</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">8-bit SIPO/SISO Shift Register, SOIC-16 package</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">$0.49</td>
-<td style="text-align: left;">$ 0.49</td>
-<td style="text-align: left;">NXP</td>
-<td style="text-align: left;">74HC595D,112</td>
-<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550">DigiKey</a></td>
-<td style="text-align: left;"><a href="https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf">datasheet link</a></td>
-<td style="text-align: left;">U1</td>
+<td>10µF Ceramic Capacitor, 20%, 0805 package</td>
+<td>3</td>
+<td>$0.08</td>
+<td>$0.24</td>
+<td>Murata</td>
+<td>GRM21BR61E106KA73L</td>
+<td>DigiKey</td>
+<td>490-17609-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/kyocera-avx/TCJA106M010R0300/827200</td>
+<td>GRM21BR61E106KA73L</td>
+<td></td>
+<td></td>
+<td></td>
+<td>C1, C9, C12</td>
 </tr>
 <tr>
-<td style="text-align: left;">0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">0.2750</td>
-<td style="text-align: left;">$2.75</td>
-<td style="text-align: left;">KEMET</td>
-<td style="text-align: left;">C0805F104K5RACTU</td>
-<td style="text-align: left;">PRLTA 109</td>
-<td style="text-align: left;">n/a</td>
-<td style="text-align: left;">C2, C4, C6, C7, C8, C9, C10, C11, C12, C16</td>
+<td>100µF Aluminum Electrolytic Capacitor, 20%, 25V, Radial</td>
+<td>1</td>
+<td>$0.21</td>
+<td>$0.21</td>
+<td>Nichicon</td>
+<td>UHE1E101MED</td>
+<td>DigiKey</td>
+<td>493-1749-ND</td>
+<td>https://www.digikey.com/en/products/detail/kyocera-avx/TCJA107M006R0150/5323767</td>
+<td>UHE1E101MED</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Cin</td>
+</tr>
+<tr>
+<td>100nF Ceramic Capacitor, 10%, 50V, X7R, 0603 package</td>
+<td>6</td>
+<td>$0.03</td>
+<td>$0.18</td>
+<td>Samsung</td>
+<td>CL10B104KB8NNNC</td>
+<td>DigiKey</td>
+<td>1276-1012-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/vishay-sprague/TMCP1E104MTRF/10107437</td>
+<td>CL10B104KB8NNNC</td>
+<td></td>
+<td></td>
+<td></td>
+<td>C3, C10, C11, C13, C20, C21</td>
+</tr>
+<tr>
+<td>22µF Ceramic Capacitor, 20%, 6.3V, X5R, 0603 package</td>
+<td>2</td>
+<td>$0.12</td>
+<td>$0.24</td>
+<td>Murata</td>
+<td>GRM188R60J226MEA0D</td>
+<td>DigiKey</td>
+<td>490-10825-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/kyocera-avx/TAJB226K020RNJ/563789</td>
+<td>GRM188R60J226MEA0D</td>
+<td></td>
+<td></td>
+<td></td>
+<td>C4, C5</td>
+</tr>
+<tr>
+<td>Green LED, 0603 package</td>
+<td>1</td>
+<td>$0.14</td>
+<td>$0.14</td>
+<td>LiteOn</td>
+<td>LTST-C190GKT</td>
+<td>DigiKey</td>
+<td>160-1444-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/liteon/LTST-C190GKT/269230</td>
+<td>LTST-C190GKT</td>
+<td></td>
+<td></td>
+<td></td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Red LED, 0603 package</td>
+<td>1</td>
+<td>$0.12</td>
+<td>$0.12</td>
+<td>Rohm</td>
+<td>SML-D12U1WT86</td>
+<td>DigiKey</td>
+<td>511-1868-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/rohm-semiconductor/SML-D12U1WT86/5843853</td>
+<td>SML-D12U1WT86</td>
+<td></td>
+<td></td>
+<td></td>
+<td>D2</td>
+</tr>
+<tr>
+<td>RF DIODE PIN , 1A, 50V, 863-1145-1-ND</td>
+<td>5</td>
+<td>$0.32</td>
+<td>$0.32</td>
+<td>Skyworks</td>
+<td>863-1145-1-ND</td>
+<td>DigiKey</td>
+<td>863-1145-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/skyworks-solutions-inc/SMP1345-040LF/2217455</td>
+<td>1N5818</td>
+<td></td>
+<td></td>
+<td></td>
+<td>D3, U4, U7</td>
+</tr>
+<tr>
+<td>Power Barrel Connector Jack, 2.1mm, 12V</td>
+<td>1</td>
+<td>$0.69</td>
+<td>$0.69</td>
+<td>Kycon</td>
+<td>KLDX-0202-BC</td>
+<td>DigiKey</td>
+<td>2092-KLDX-0202-BC-ND</td>
+<td>https://www.digikey.com/en/products/detail/kycon-inc/KLDX-0202-BC/9990097</td>
+<td>KLDX-0202-BC</td>
+<td></td>
+<td></td>
+<td></td>
+<td>J1</td>
+</tr>
+<tr>
+<td>10kΩ Thick Film Resistor, 1%, 0.1W, 0603 package</td>
+<td>8</td>
+<td>$0.01</td>
+<td>$0.08</td>
+<td>Yageo</td>
+<td>RC0603FR-0710KL</td>
+<td>DigiKey</td>
+<td>311-10KCRCT-ND</td>
+<td>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT10K0/1761433</td>
+<td>RC0603FR-0710KL</td>
+<td></td>
+<td></td>
+<td></td>
+<td>R1, R4, R8, R9, R10, R11, R15, R18</td>
+</tr>
+<tr>
+<td>1kΩ Thick Film Resistor, 1%, 0.1W, 0603 package</td>
+<td>4</td>
+<td>$0.01</td>
+<td>$0.04</td>
+<td>Yageo</td>
+<td>RC0603FR-071KL</td>
+<td>DigiKey</td>
+<td>311-1.0KCRCT-ND</td>
+<td>https://www.digikey.com/en/products/detail/yageo/RC0603FR-071KL/726843</td>
+<td>RC0603FR-071KL</td>
+<td></td>
+<td></td>
+<td></td>
+<td>R2, R3, R20, R21</td>
+</tr>
+<tr>
+<td>22Ω Thick Film Resistor, 1%, 0.1W, 0603 package</td>
+<td>2</td>
+<td>$0.01</td>
+<td>$0.02</td>
+<td>Yageo</td>
+<td>RC0603FR-0722RL</td>
+<td>DigiKey</td>
+<td>311-22CRCT-ND</td>
+<td>https://www.digikey.com/en/products/detail/yageo/RC0402FR-0722RL/726562</td>
+<td>RC0603FR-0722RL</td>
+<td></td>
+<td></td>
+<td></td>
+<td>R5, R6</td>
+</tr>
+<tr>
+<td>1.5kΩ Thick Film Resistor, 1%, 0.1W, 0603 package</td>
+<td>1</td>
+<td>$0.01</td>
+<td>$0.01</td>
+<td>Yageo</td>
+<td>RC0603FR-071K5L</td>
+<td>DigiKey</td>
+<td>311-1.5KCRCT-ND</td>
+<td>https://www.digikey.com/en/products/detail/yageo/RC0402FR-071K5L/726519</td>
+<td>RC0603FR-071K5L</td>
+<td></td>
+<td></td>
+<td></td>
+<td>R7</td>
+</tr>
+<tr>
+<td>Tactile Push Button Switch, SPST, 12V, 50mA</td>
+<td>2</td>
+<td>$0.46</td>
+<td>$0.92</td>
+<td>E-Switch</td>
+<td>TL2233OA</td>
+<td>DigiKey</td>
+<td>EG4623-ND</td>
+<td>https://www.digikey.com/en/products/detail/e-switch/TL2233OA/15220943</td>
+<td>TL2233OA</td>
+<td></td>
+<td></td>
+<td></td>
+<td>SW1, SW2</td>
+</tr>
+<tr>
+<td>ESP32-S3-WROOM-1-N4 MCU Module</td>
+<td>1</td>
+<td>$5.06</td>
+<td>$5.06</td>
+<td>Espressif</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>DigiKey</td>
+<td>1965-ESP32-S3-WROOM-1-N4CT-ND</td>
+<td>https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>U1</td>
+</tr>
+<tr>
+<td>3.3V Step-Down Switching Regulator, 1A, 52kHz, D²PAK package</td>
+<td>1</td>
+<td>$1.85</td>
+<td>$1.85</td>
+<td>onsemi</td>
+<td>LM2575D2T-3.3R4G</td>
+<td>DigiKey</td>
+<td>LM2575D2T-3.3R4GOS-ND</td>
+<td>https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/2714705</td>
+<td>LM2575D2T-3.3R4G</td>
+<td></td>
+<td></td>
+<td></td>
+<td>U2</td>
+</tr>
+<tr>
+<td>Photoresistor, NORPS-12</td>
+<td>1</td>
+<td>$2.23</td>
+<td>$2.23</td>
+<td>Advanced Photonix</td>
+<td>NORPS-12</td>
+<td>DigiKey</td>
+<td>NORPS-12-ND</td>
+<td>https://www.digikey.com/en/products/detail/advanced-photonix/NORPS-12/5039796</td>
+<td>NORPS-12</td>
+<td></td>
+<td></td>
+<td></td>
+<td>U3</td>
+</tr>
+<tr>
+<td>16-Bit ADC Converter, MSOP-10 package</td>
+<td>1</td>
+<td>$5.12</td>
+<td>$5.12</td>
+<td>Texas Instruments</td>
+<td>ADS1115IDGSR</td>
+<td>DigiKey</td>
+<td>296-41793-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGSR/2231567</td>
+<td>ADS1115IDGSR</td>
+<td></td>
+<td></td>
+<td></td>
+<td>U5</td>
+</tr>
+<tr>
+<td>USB - micro B USB 2.0 Receptacle Connector 5 Position Surface Mount, Right Angle; Through Hole</td>
+<td>1</td>
+<td>$0.78</td>
+<td>$0.78</td>
+<td>JAE Electronics</td>
+<td>CONN RCPT USB2.0 MICRO B SMD R/A</td>
+<td>DigiKey</td>
+<td>670-2675-1-ND</td>
+<td>https://www.digikey.com/en/products/detail/jae-electronics/DX4R005JJ2R1800/3903229?s=N4IgTCBcDaIGwHYAMBaMiCsKCMKByAIiALoC%2BQA</td>
+<td>USBLC6-2SC6</td>
+<td></td>
+<td></td>
+<td></td>
+<td>U8</td>
 </tr>
 </tbody>
 </table>
-<p>Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.</p>
-<ul>
-<li>You could also import your BOM via a screenshot of the spreadsheet created BOM</li>
-</ul>
-<h2 id="bill-of-materials-example-as-image">Bill of Materials (Example as Image)</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../BOM-Screenshot.png" data-desc-position="bottom"><img _2000_="&quot;2000&quot;" alt="" src="../BOM-Screenshot.png" style="style" width:="width:"></a>
-<strong>Figure ##:</strong> Example Bill of Materials as a screenshot.</p>
-<p>As you can see, the text can be difficult to read without opening the image.</p>
 <h2 id="resouce">Resouce</h2>
-<p>The Bill of Material as a PDF download is available <a href="../PDF_For_BOM_EXAMPLE.pdf"><em>here</em></a>.</p>
+<p>The Bill of Material as a PDF download is available .</p>
 
 
 
