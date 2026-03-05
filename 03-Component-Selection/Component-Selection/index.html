@@ -686,9 +686,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-lm1085isx-33-nopb-ldo-regulator" class="md-nav__link">
+  <a href="#option-1lm2575d2t-33r4g-switching-regulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1: LM1085ISX-3.3-NOPB LDO Regulator
+      Option 1:LM2575D2T-3.3R4G Switching Regulator
     </span>
   </a>
   
@@ -1107,9 +1107,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-lm1085isx-33-nopb-ldo-regulator" class="md-nav__link">
+  <a href="#option-1lm2575d2t-33r4g-switching-regulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1: LM1085ISX-3.3-NOPB LDO Regulator
+      Option 1:LM2575D2T-3.3R4G Switching Regulator
     </span>
   </a>
   
@@ -1288,30 +1288,26 @@ $2.98 each<br>
 <p><strong>Rationale:</strong> The underwater rover application requires a waterproof light sensor. The custom NORPS-12 solution enables an IP68-rated submersible sensor optimized for blue-green wavelengths (550nm peak) that dominate underwater. This provides superior spectral matching for underwater conditions, wide temperature range (-60°C to 75°C), and high voltage protection (250Vpk). Total cost (<span class="arithmatex">\(2.23) is significantly lower than commercial underwater sensors (\)</span>50+), and the design can be easily scaled for multiple rover units.</p>
 <hr>
 <h2 id="33v-power-regulation-subsystem"><strong>3.3V Power Regulation Subsystem</strong></h2>
-<h3 id="option-1-lm1085isx-33-nopb-ldo-regulator"><strong>Option 1: LM1085ISX-3.3-NOPB LDO Regulator</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/c201f543-9108-4bdd-a9b2-2cd5053df6d5" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/c201f543-9108-4bdd-a9b2-2cd5053df6d5"></a></p>
-<p><strong>$3.45 each</strong><br>
-<a href="https://www.digikey.com/en/products/detail/texas-instruments/LM1085ISX-3-3-NOPB/366710">DigiKey: LM1085ISX-3.3-NOPB LDO Regulator</a> </p>
+<h3 id="option-1lm2575d2t-33r4g-switching-regulator"><strong>Option 1:LM2575D2T-3.3R4G Switching Regulator</strong></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/441644dc-56e8-4260-8a0e-fff107dffcbe" data-desc-position="bottom"><img width="197" height="89" alt="Image" src="https://github.com/user-attachments/assets/441644dc-56e8-4260-8a0e-fff107dffcbe"></a></p>
+<p><strong>$2.51 each</strong><br>
+<a href="https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700?s=N4IgTCBcDaIDIFkwFYDsyAqBaAzAOhwHEB5AZSwDkAREAXQF8g">DigiKey: LM2575D2T-3.3R4G Buck Regulator</a> </p>
 <p><strong>Pros</strong>
-- <strong>Surface-mount D²PAK (TO-263) package</strong> – meets our SMD assembly requirements, no through-hole parts
-- High output current: <strong>3A</strong> continuous, ample headroom for all sensors + MCU + peripherals
-- Low dropout voltage: <strong>1.3V max at 3A</strong> – operates from 4.6V input for 3.3V out
-- Fixed 3.3V output, no adjustment resistors needed
-- Wide input voltage range: up to <strong>27V</strong> – compatible with 9V/12V/24V systems
-- Excellent line/load regulation: 0.015% typical
-- Built-in protection: thermal shutdown, current limit, safe area protection
-- Low quiescent current: <strong>5mA typical</strong> at full load
-- Stable with low-ESR ceramic output capacitors
-- Industry-standard D²PAK footprint, compatible with reflow soldering</p>
+- <strong>Surface-mount D²PAK (TO-263) package</strong> - meets our SMD assembly requirements, no through-hole parts
+- <strong>Switching regulator efficiency</strong>: ~75% at 1A load - significantly cooler than linear regulators
+- <strong>Adequate output current</strong>: <strong>1A continuous</strong>, perfect for our ~200mA sensor + MCU load
+- <strong>Wide input voltage range</strong>: <strong>4.75V to 40V</strong> - compatible with 9V/12V/24V systems with headroom
+- <strong>Fixed 3.3V output</strong> - no external divider resistors needed for fixed version
+- <strong>Built-in protection</strong>: thermal shutdown, current limiting, cycle-by-cycle current limit
+- <strong>ON/OFF shutdown pin</strong>: <strong>80μA typical standby current</strong> for power saving modes
+- <strong>Low heat dissipation at light loads</strong>: At 200mA, power dissipation is minimal - no heatsink required</p>
 <p><strong>Cons</strong>
-- <strong>Higher cost</strong>: $3.45 – significantly more expensive than AP2112 or LM2940
-- Still a <strong>linear regulator</strong>: efficiency only ~37% with 9V input at 3.3V out
-- <strong>Significant heat dissipation at high current</strong>: 3A load = 17.1W power dissipation – requires <strong>heatsinking even in SMD package</strong>
-- Larger SMD package than SOT-23 LDOs, consumes more PCB area
-- Not adjustable; fixed 3.3V version only
-- Higher quiescent current than modern CMOS LDOs (AP2112: 60µA)
-- Overkill for low-power sensor applications (600mA vs our ~200mA load)
-- D²PAK requires proper PCB copper pour for thermal management</p>
+- <strong>Requires 4 external components</strong>: inductor, catch diode, input/output capacitors
+- <strong>Larger total PCB footprint</strong> due to external components
+- <strong>Switching noise present</strong>: 52kHz ripple on output (~50mV typical) - may need additional filtering for sensitive analog circuits
+- <strong>Not adjustable</strong> (fixed 3.3V version selected - adjustable version available if needed)
+- <strong>Higher quiescent current than CMOS LDOs</strong>: 5mA typical vs 60µA for AP2112
+- <strong>D²PAK still requires good copper pour</strong> for thermal management, though less critical than LM1085</p>
 <hr>
 <h3 id="option-2-lm7805ct-nopb-linear-regulator"><strong>Option 2: LM7805CT-NOPB Linear Regulator</strong></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301" data-desc-position="bottom"><img alt="LM7805CT" src="https://github.com/user-attachments/assets/27e006c2-1af3-44d2-a514-25bb346cb301"></a></p>
@@ -1361,8 +1357,8 @@ gived in class
 * Not adjustable; requires different part number for other voltages
 * Higher quiescent current (5mA typical for I<sub>Q</sub> + 2.5mA for I<sub>adj</sub>) than modern switchers</p>
 <hr>
-<p><strong>Choice:</strong> <strong>Option 1: LM1085ISX-3.3-NOPB LDO Regulator</strong></p>
-<p><strong>Rationale:</strong> Surface-mount compatibility is the primary requirement for our power rail. The LM1085ISX-3.3-NOPB comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 3A output provides substantial headroom for all sensors and the microcontroller. While it is a linear regulator, our typical 200mA load keeps dissipation under 1.3W—manageable with proper PCB copper pouring. Built-in thermal shutdown and current limit protect against faults. Although the $3.45 unit cost is higher than through-hole alternatives, this part eliminates manual soldering and keeps our bill of materials fully surface-mount.</p>
+<p><strong>Choice:</strong> <strong>Option 1: LM2575D2T-3.3R4G Switching Regulator</strong></p>
+<p><strong>Rationale:</strong> Surface-mount compatibility is the primary requirement for our power rail. The LM2575D2T-3.3R4G comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 1A output provides ample headroom for all sensors and the microcontroller. As a switching regulator, it achieves ~75% efficiency—much cooler than linear alternatives at our 200mA load. Built-in thermal shutdown and current limit protect against faults. At ~2.51 (47% less than the LDO option), it requires 4 external components but handles 9V-24V inputs without overheating.</p>
 <hr>
 <h2 id="barrel-jack-connector"><strong>Barrel Jack Connector</strong></h2>
 <h3 id="option-1-model-0930-9v-3a-ac-dc-wall-power-supplygiven-in-class"><strong>Option 1: Model 0930 9V 3A AC-DC Wall Power Supply(given in class)</strong></h3>
