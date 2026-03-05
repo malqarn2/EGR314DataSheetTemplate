@@ -11,6 +11,6 @@ The photoresistor module measures light levels underwater at 3.3V power. It send
 ## Mo's Block Diagram 
 
 
-<img width="812" height="461" alt="Image" src="https://github.com/user-attachments/assets/0bbc1cc5-f306-42af-ad72-2e96dd8c2df1" />
+<img width="811" height="461" alt="Image" src="https://github.com/user-attachments/assets/b4a98abe-49d8-4f86-9450-1303e19ee270" />
 
 or as [Mo_Block.diagram.314.pdf](https://github.com/user-attachments/files/25563221/Mo_Block.diagram.314.pdf)
