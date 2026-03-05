@@ -88,35 +88,31 @@ Components:
 
 ## **3.3V Power Regulation Subsystem** 
 
-### **Option 1: LM1085ISX-3.3-NOPB LDO Regulator**
-![Image](https://github.com/user-attachments/assets/c201f543-9108-4bdd-a9b2-2cd5053df6d5)
+### **Option 1:LM2575D2T-3.3R4G Switching Regulator**
 
-**$3.45 each**  
-[DigiKey: LM1085ISX-3.3-NOPB LDO Regulator](https://www.digikey.com/en/products/detail/texas-instruments/LM1085ISX-3-3-NOPB/366710) 
+<img width="197" height="89" alt="Image" src="https://github.com/user-attachments/assets/441644dc-56e8-4260-8a0e-fff107dffcbe" />
+
+**$2.51 each**  
+[DigiKey: LM2575D2T-3.3R4G Buck Regulator](https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700?s=N4IgTCBcDaIDIFkwFYDsyAqBaAzAOhwHEB5AZSwDkAREAXQF8g) 
 
 
 **Pros**
-- **Surface-mount D²PAK (TO-263) package** – meets our SMD assembly requirements, no through-hole parts
-- High output current: **3A** continuous, ample headroom for all sensors + MCU + peripherals
-- Low dropout voltage: **1.3V max at 3A** – operates from 4.6V input for 3.3V out
-- Fixed 3.3V output, no adjustment resistors needed
-- Wide input voltage range: up to **27V** – compatible with 9V/12V/24V systems
-- Excellent line/load regulation: 0.015% typical
-- Built-in protection: thermal shutdown, current limit, safe area protection
-- Low quiescent current: **5mA typical** at full load
-- Stable with low-ESR ceramic output capacitors
-- Industry-standard D²PAK footprint, compatible with reflow soldering
+- **Surface-mount D²PAK (TO-263) package** - meets our SMD assembly requirements, no through-hole parts
+- **Switching regulator efficiency**: ~75% at 1A load - significantly cooler than linear regulators
+- **Adequate output current**: **1A continuous**, perfect for our ~200mA sensor + MCU load
+- **Wide input voltage range**: **4.75V to 40V** - compatible with 9V/12V/24V systems with headroom
+- **Fixed 3.3V output** - no external divider resistors needed for fixed version
+- **Built-in protection**: thermal shutdown, current limiting, cycle-by-cycle current limit
+- **ON/OFF shutdown pin**: **80μA typical standby current** for power saving modes
+- **Low heat dissipation at light loads**: At 200mA, power dissipation is minimal - no heatsink required
 
 **Cons**
-- **Higher cost**: $3.45 – significantly more expensive than AP2112 or LM2940
-- Still a **linear regulator**: efficiency only ~37% with 9V input at 3.3V out
-- **Significant heat dissipation at high current**: 3A load = 17.1W power dissipation – requires **heatsinking even in SMD package**
-- Larger SMD package than SOT-23 LDOs, consumes more PCB area
-- Not adjustable; fixed 3.3V version only
-- Higher quiescent current than modern CMOS LDOs (AP2112: 60µA)
-- Overkill for low-power sensor applications (600mA vs our ~200mA load)
-- D²PAK requires proper PCB copper pour for thermal management
-
+- **Requires 4 external components**: inductor, catch diode, input/output capacitors
+- **Larger total PCB footprint** due to external components
+- **Switching noise present**: 52kHz ripple on output (~50mV typical) - may need additional filtering for sensitive analog circuits
+- **Not adjustable** (fixed 3.3V version selected - adjustable version available if needed)
+- **Higher quiescent current than CMOS LDOs**: 5mA typical vs 60µA for AP2112
+- **D²PAK still requires good copper pour** for thermal management, though less critical than LM1085
 ---
 
 
@@ -183,9 +179,9 @@ gived in class
 
 ---
 
-**Choice:** **Option 1: LM1085ISX-3.3-NOPB LDO Regulator**
+**Choice:** **Option 1: LM2575D2T-3.3R4G Switching Regulator**
 
-**Rationale:** Surface-mount compatibility is the primary requirement for our power rail. The LM1085ISX-3.3-NOPB comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 3A output provides substantial headroom for all sensors and the microcontroller. While it is a linear regulator, our typical 200mA load keeps dissipation under 1.3W—manageable with proper PCB copper pouring. Built-in thermal shutdown and current limit protect against faults. Although the $3.45 unit cost is higher than through-hole alternatives, this part eliminates manual soldering and keeps our bill of materials fully surface-mount.
+**Rationale:** Surface-mount compatibility is the primary requirement for our power rail. The LM2575D2T-3.3R4G comes in a D²PAK package, making it fully reflow-compatible with our SMD assembly process. Its 1A output provides ample headroom for all sensors and the microcontroller. As a switching regulator, it achieves ~75% efficiency—much cooler than linear alternatives at our 200mA load. Built-in thermal shutdown and current limit protect against faults. At ~2.51 (47% less than the LDO option), it requires 4 external components but handles 9V-24V inputs without overheating.
 
 
 ---
