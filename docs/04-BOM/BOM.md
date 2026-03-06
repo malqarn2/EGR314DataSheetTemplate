@@ -43,7 +43,3 @@ This project is an ESP32-S3 based microcontroller system with integrated sensor 
 | USB - micro B USB 2.0 Receptacle Connector 5 Position Surface Mount, Right Angle; Through Hole  | 1 | $0.78 | $0.78 | 	JAE Electronics | CONN RCPT USB2.0 MICRO B SMD R/A | DigiKey | 670-2675-1-ND | https://www.digikey.com/en/products/detail/jae-electronics/DX4R005JJ2R1800/3903229?s=N4IgTCBcDaIGwHYAMBaMiCsKCMKByAIiALoC%2BQA | USBLC6-2SC6 | | | | U8 |
 
 
-
-## Resouce
-
-The Bill of Material as a PDF download is available .
