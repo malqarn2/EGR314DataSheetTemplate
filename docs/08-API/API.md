@@ -60,4 +60,4 @@ Returns the current status of the Light Subsystem to the control subsystem.
 | description | example |
 |------------|--------|
 | received   | [12][6][3] |
-| sent       | [13][6][1] |
+| sent       | [13][6][1]or[0] |
