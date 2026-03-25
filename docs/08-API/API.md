@@ -55,3 +55,9 @@ Returns the current status of the Light Subsystem to the control subsystem.
 
 - The light sensor value is read internally as a `uint16_t` in MicroPython, then converted into a binary status code for transmission.
 
+## Valid Message Examples
+
+| description | example |
+|------------|--------|
+| received   | [12][6][3] |
+| sent       | [13][6][1] |
