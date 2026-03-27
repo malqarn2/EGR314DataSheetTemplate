@@ -59,5 +59,5 @@ Returns the current status of the Light Subsystem to the control subsystem.
 
 | description | example |
 |------------|--------|
-| received   | [12][6][3] |
-| sent       | [13][6][1]or[0] |
+| received   | [0x41][0x5A][2][6][12][6][3]...[0x59][0x42] |
+| sent       | [0x41][0x5A][6][2][13][6][1]...[0x59][0x42] |
