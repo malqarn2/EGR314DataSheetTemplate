@@ -1,5 +1,21 @@
 # API
 
+## Light Subsystem
+
+My role is the Light Subsystem. I detect ambient light levels using a photoresistor connected through an ADS1115 16-bit ADC. My subsystem reports light status to the rest of the system by converting the sensor reading into a simple binary result, where `0` means no light detected and `1` means light detected.
+
+My subsystem communicates on the team UART daisy chain using subsystem ID `6`. I receive Message Type 12 from Adrian (ID `2`) when the control subsystem requests my current status. I then respond with Message Type 13, returning the processed light status code. Although the sensor is read internally as a `uint16_t` value in MicroPython, the transmitted API message uses a `uint8_t` status code.
+
+## Team Member IDs
+
+| Individual | Subsystem Number |
+|------------|------------------|
+| Sam B      | 1                |
+| Adrian P   | 2                |
+| Andrew I   | 3                |
+| Jacob D    | 4                |
+| Sam M      | 5                |
+| Mo A (me)  | 6                |
 
 ## Messages Directed To The Light Subsystem
 
