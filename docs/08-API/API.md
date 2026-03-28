@@ -77,3 +77,5 @@ Returns the current status of the Light Subsystem to the control subsystem.
 |------------|--------|
 | received   | [0x41][0x5A][2][6][12][6][3]...[0x59][0x42] |
 | sent       | [0x41][0x5A][6][2][13][6][1]...[0x59][0x42] |
+
+The software of this API download is available[here](https://github.com/user-attachments/files/26317978/API.PDF.pdf) .
