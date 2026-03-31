@@ -1274,8 +1274,7 @@
 
 <h1 id="api">API</h1>
 <h2 id="light-subsystem">Light Subsystem</h2>
-<p>My role is the Light Subsystem. I detect ambient light levels using a photoresistor connected through an ADS1115 16-bit ADC. My subsystem reports light status to the rest of the system by converting the sensor reading into a simple binary result, where <code>0</code> means no light detected and <code>1</code> means light detected.</p>
-<p>My subsystem communicates on the team UART daisy chain using subsystem ID <code>6</code>. I receive Message Type 12 from Adrian (ID <code>2</code>) when the control subsystem requests my current status. I then respond with Message Type 13, returning the processed light status code. Although the sensor is read internally as a <code>uint16_t</code> value in MicroPython, the transmitted API message uses a <code>uint8_t</code> status code.</p>
+<p>My role is the Light Subsystem. I detect ambient light levels using a photoresistor.</p>
 <h2 id="team-member-ids">Team Member IDs</h2>
 <table>
 <thead>
