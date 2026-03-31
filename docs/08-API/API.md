@@ -17,6 +17,22 @@ My subsystem communicates on the team UART daisy chain using subsystem ID `6`. I
 | Sam M      | 5                |
 | Mo A (me)  | 6                |
 
+---
+## Messages Sent By The Light Subsystem
+
+### Message Type 3 -- Print Sensor Value
+
+**Number of Bytes:** 5
+
+| Column name   | Byte 1       | Byte 2             | Byte 3         | Byte 4               | Byte 5               |
+|---------------|--------------|--------------------|----------------|----------------------|----------------------|
+| Variable Name | message_type | subsystem_number   | sensor_number  | upper_sensor_value   | lower_sensor_value   |
+| Variable Type | uint8_t      | uint8_t            | uint8_t        | uint8_t              | uint8_t              |
+| Min Value     | 3            | 6                  | 1              | 0                    | 0                    |
+| Max Value     | 3            | 6                  | 1              | 255                  | 255                  |
+| Example       | 3            | 6                  | 1              | 54                   | 176                  |
+
+---
 ## Messages Directed To The Light Subsystem
 
 ### Message Type 12 -- Request Subsystem Status
