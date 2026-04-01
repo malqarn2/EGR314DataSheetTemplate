@@ -990,6 +990,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-type-10-alert-control-unit-to-subsystem-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 10 -- Alert Control Unit to Subsystem Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-13-alert-control-to-subsystem-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 13 -- Alert Control to Subsystem Status
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1009,30 +1027,6 @@
   <a href="#message-type-12-request-subsystem-status" class="md-nav__link">
     <span class="md-ellipsis">
       Message Type 12 -- Request Subsystem Status
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#messages-sent-by-the-light-subsystem_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Messages Sent By The Light Subsystem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Messages Sent By The Light Subsystem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#message-type-13-alert-control-to-subsystem-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 13 -- Alert Control to Subsystem Status
     </span>
   </a>
   
@@ -1187,6 +1181,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-type-10-alert-control-unit-to-subsystem-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 10 -- Alert Control Unit to Subsystem Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-13-alert-control-to-subsystem-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 13 -- Alert Control to Subsystem Status
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1206,30 +1218,6 @@
   <a href="#message-type-12-request-subsystem-status" class="md-nav__link">
     <span class="md-ellipsis">
       Message Type 12 -- Request Subsystem Status
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#messages-sent-by-the-light-subsystem_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Messages Sent By The Light Subsystem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Messages Sent By The Light Subsystem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#message-type-13-alert-control-to-subsystem-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 13 -- Alert Control to Subsystem Status
     </span>
   </a>
   
@@ -1274,7 +1262,7 @@
 
 <h1 id="api">API</h1>
 <h2 id="light-subsystem">Light Subsystem</h2>
-<p>My role is the Light Subsystem. I detect ambient light levels using a photoresistor.</p>
+<p>My role is the Light Subsystem. I monitor ambient light using a photoresistor.</p>
 <h2 id="team-member-ids">Team Member IDs</h2>
 <table>
 <thead>
@@ -1310,6 +1298,7 @@
 </tr>
 </tbody>
 </table>
+<p>These tables describe the <strong>message data portion</strong> of each packet only.</p>
 <hr>
 <h2 id="messages-sent-by-the-light-subsystem">Messages Sent By The Light Subsystem</h2>
 <h3 id="message-type-3-print-sensor-value">Message Type 3 -- Print Sensor Value</h3>
@@ -1368,6 +1357,134 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Purpose:</strong><br>
+Sends the raw light sensor value from the Light Subsystem.</p>
+<p><strong>Notes:</strong><br>
+- Byte 1 is the message type.<br>
+- Byte 2 identifies the sending subsystem, which is <code>6</code> for the Light Subsystem.<br>
+- Byte 3 identifies the sensor, which is <code>1</code> for the light sensor.<br>
+- Bytes 4 and 5 contain the 16-bit sensor value split into upper and lower bytes.<br>
+- Example value <code>54, 176</code> corresponds to decimal <code>14000</code>.</p>
+<hr>
+<h3 id="message-type-10-alert-control-unit-to-subsystem-error">Message Type 10 -- Alert Control Unit to Subsystem Error</h3>
+<p><strong>Number of Bytes:</strong> 4</p>
+<table>
+<thead>
+<tr>
+<th>Column name</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>subsystem_number</td>
+<td>error_code</td>
+<td>sender_num</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>int8_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>10</td>
+<td>2</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>10</td>
+<td>2</td>
+<td>64</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>10</td>
+<td>2</td>
+<td>10</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong><br>
+Sends an error code from the Light Subsystem to Adrian's control subsystem.</p>
+<p><strong>Notes:</strong><br>
+- Byte 1 is the message type.<br>
+- Byte 2 identifies the destination subsystem, which is <code>2</code> for Adrian.<br>
+- Byte 3 contains the error code.<br>
+- Byte 4 identifies the sender, which is <code>6</code> for the Light Subsystem.<br>
+- This message is sent when the Light Subsystem detects an error condition.</p>
+<hr>
+<h3 id="message-type-13-alert-control-to-subsystem-status">Message Type 13 -- Alert Control to Subsystem Status</h3>
+<p><strong>Number of Bytes:</strong> 4</p>
+<table>
+<thead>
+<tr>
+<th>Column name</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>subsystem_number</td>
+<td>sender_num</td>
+<td>status_code</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>int8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>13</td>
+<td>2</td>
+<td>6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>13</td>
+<td>2</td>
+<td>6</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>13</td>
+<td>2</td>
+<td>6</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong><br>
+Sends the Light Subsystem status to Adrian's control subsystem.</p>
+<p><strong>Status Code Definition:</strong><br>
+- <code>0</code> = No light detected<br>
+- <code>1</code> = Light detected  </p>
+<p><strong>Notes:</strong><br>
+- Byte 1 is the message type.<br>
+- Byte 2 identifies the destination subsystem, which is <code>2</code> for Adrian.<br>
+- Byte 3 identifies the sender, which is <code>6</code> for the Light Subsystem.<br>
+- Byte 4 contains the status code.</p>
 <hr>
 <h2 id="messages-directed-to-the-light-subsystem">Messages Directed To The Light Subsystem</h2>
 <h3 id="message-type-12-request-subsystem-status">Message Type 12 -- Request Subsystem Status</h3>
@@ -1419,66 +1536,8 @@ Requests the current status of the Light Subsystem.</p>
 <p><strong>Notes:</strong><br>
 - Byte 1 is always the message type.<br>
 - Byte 2 identifies the target subsystem, which is <code>6</code> for the Light Subsystem.<br>
-- Byte 3 is a request code from the control subsystem.  </p>
+- Byte 3 is a request code from the control subsystem.</p>
 <hr>
-<h2 id="messages-sent-by-the-light-subsystem_1">Messages Sent By The Light Subsystem</h2>
-<h3 id="message-type-13-alert-control-to-subsystem-status">Message Type 13 -- Alert Control to Subsystem Status</h3>
-<p><strong>Number of Bytes:</strong> 3</p>
-<table>
-<thead>
-<tr>
-<th>Column name</th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-<th>Byte 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
-<td>message_type</td>
-<td>subsystem_number</td>
-<td>status_code</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min Value</td>
-<td>13</td>
-<td>6</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Value</td>
-<td>13</td>
-<td>6</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>13</td>
-<td>6</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Purpose:</strong><br>
-Returns the current status of the Light Subsystem to the control subsystem.</p>
-<p><strong>Status Code Definition:</strong><br>
-- <code>0</code> = No light detected<br>
-- <code>1</code> = Light detected  </p>
-<p><strong>Notes:</strong><br>
-- Byte 1 is always the message type.<br>
-- Byte 2 identifies the sending subsystem, which is <code>6</code> for the Light Subsystem.<br>
-- Byte 3 contains the light status code.<br>
-- The light sensor is read internally as a <code>uint16_t</code> value in MicroPython, then converted into a binary status code before transmission.  </p>
-<ul>
-<li>The light sensor value is read internally as a <code>uint16_t</code> in MicroPython, then converted into a binary status code for transmission.</li>
-</ul>
 <h2 id="valid-message-examples">Valid Message Examples</h2>
 <table>
 <thead>
@@ -1489,12 +1548,20 @@ Returns the current status of the Light Subsystem to the control subsystem.</p>
 </thead>
 <tbody>
 <tr>
-<td>received</td>
+<td>sent sensor value</td>
+<td>[0x41][0x5A][6][0x58][3][6][1][54][176]...[0x59][0x42]</td>
+</tr>
+<tr>
+<td>received status request</td>
 <td>[0x41][0x5A][2][6][12][6][3]...[0x59][0x42]</td>
 </tr>
 <tr>
-<td>sent</td>
-<td>[0x41][0x5A][6][2][13][6][1]...[0x59][0x42]</td>
+<td>sent status response</td>
+<td>[0x41][0x5A][6][2][13][2][6][1]...[0x59][0x42]</td>
+</tr>
+<tr>
+<td>sent error response</td>
+<td>[0x41][0x5A][6][2][10][2][10][6]...[0x59][0x42]</td>
 </tr>
 </tbody>
 </table>
