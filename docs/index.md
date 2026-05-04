@@ -28,8 +28,4 @@ For more details about the complete team design and how all subsystems fit toget
 
 ### My Contribution
 
-My contribution to the team project is the light sensor subsystem. I designed and implemented the subsystem hardware around the ESP32-S3 and used a photoresistor together with an ADS1115 external ADC to measure ambient light. My subsystem determines whether light is present or not present, then communicates that information to the team system.
-
-On the software side, I wrote the code needed to read the sensor, convert the reading into a simple light or no-light status, and send messages across the UART communication chain. I also worked on packet formatting, message handling, and subsystem responses so that my board could communicate correctly with the control subsystem and the rest of the project. In addition, I updated the datasheet and API documentation for my subsystem so that the hardware and communication behavior were clearly explained.
-
-This datasheet is organized so that a reader can review the hardware design, bill of materials, API/message structure, and implementation details of the light subsystem. To review the details of the material used to construct the subsection, see the **BOM** section of the datasheet.
+- My contribution to this project is the light sensor subsystem. I designed and implemented the hardware and software needed to detect ambient light and convert it into a usable system status. My subsystem uses a photoresistor with an ADS1115 external ADC to read light levels and determine whether there is light or no light. I also developed the communication portion of the subsystem so it can send status and sensor messages to the control subsystem and respond correctly to incoming requests. This allows my subsystem to support the larger submarine project by providing environmental light information to the team system.
