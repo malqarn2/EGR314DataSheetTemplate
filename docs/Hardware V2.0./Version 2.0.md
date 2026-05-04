@@ -1,5 +1,5 @@
 # Hardware V2.0
-
+---
 If I were to create a Version 2.0 of my light subsystem hardware, I would mainly focus on improving reliability, debugging, and ease of integration with the rest of the team system. My current design works, but there are several areas where the hardware could be improved to make the board more stable and easier to use during testing and final integration.
 
 One improvement would be to make the UART section clearer and more robust. In Version 1, the UART communication worked, but debugging the TX and RX paths was sometimes confusing during bring-up and testing. For Version 2.0, I would label the UART input and output paths more clearly on the schematic and PCB silkscreen so it is easier to verify the signal direction during checkoff and team integration. I would also consider adding simple UART test points so that the communication lines could be probed with a multimeter or oscilloscope. This would make it much easier to debug packet transmission problems without guessing whether the issue is in software, wiring, or board layout.
