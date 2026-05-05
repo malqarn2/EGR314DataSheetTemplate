@@ -265,3 +265,14 @@ The rover requires a dependable and precisely regulated power source for consist
  
 ---
 
+## Final Major Components Summary
+
+| Component | Part / Device | Purpose in Project |
+|-----------|---------------|--------------------|
+| Microcontroller | ESP32-S3 | Main controller for the light subsystem. It reads processed sensor data, makes light/no-light decisions, and handles UART communication with the rest of the submarine system. |
+| Light Sensor | NORPS-12 Photoresistor (LDR) | Detects ambient light level in the environment around the submarine. |
+| ADC | ADS1115 | Converts the analog signal from the photoresistor into a 16-bit digital value that can be read by the ESP32-S3 through I2C. |
+| Voltage Regulator | LM2575-3.3 Switching Regulator | Steps the input power down to a stable 3.3V supply for the subsystem electronics. |
+| Power Input | 12V DC Barrel Jack Adapter | Provides external power input to the subsystem board. |
+| Programming / Interface Port | USB Connector / USB Programmer Interface | Used to program the ESP32-S3 and support testing and debugging during development. |
+| Communication Interface | UART Daisy-Chain Headers | Allows the subsystem to connect to the rest of the team’s submarine system and send, receive, or forward UART packets. |
