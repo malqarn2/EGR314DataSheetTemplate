@@ -5,7 +5,7 @@ title: Module's Block Diagram
 
 ## Overview
 
-- The photoresistor module measures light levels underwater at 3.3V power. It sends analog voltage readings to the IC  which converts them to digital light values to the rover's brain (ESP32) . These readings are shared with other rover systems through wireless communication for environmental monitoring.
+The photoresistor module measures light levels underwater at 3.3V power. It sends analog voltage readings to the IC  which converts them to digital light values to the rover's brain (ESP32) . These readings are shared with other rover systems through wireless communication for environmental monitoring.
 
 
 ## Mo's Block Diagram 
