@@ -21,12 +21,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03a-MCU/ESP%2032/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03-PowerBudget/power/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03b-PowerBudget/power/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03a-MCU/ESP%2032/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
