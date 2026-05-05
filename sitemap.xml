@@ -21,37 +21,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03-PowerBudget/power/</loc>
-         <lastmod>2026-05-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/05-Schematic/schematic/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/05-PowerBudget/power/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/06-PCB/pcb/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/06-Schematic/schematic/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/07-API/API/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/07-PCB/pcb/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/08-Reflection/Reflection/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/08-API/API/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/09-Hardware%20V2/Version%202.0/</loc>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/09-Reflection/Reflection/</loc>
+         <lastmod>2026-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/10-Hardware%20V2/Version%202.0/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
