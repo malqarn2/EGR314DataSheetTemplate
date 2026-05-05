@@ -854,6 +854,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#final-major-components-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Major Components Summary
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1459,6 +1468,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#final-major-components-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Major Components Summary
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1685,6 +1703,53 @@ The rover requires a dependable and precisely regulated power source for consist
 * Input impedance varies with gain setting (2.4MΩ to 10MΩ)
 *  Only 4 possible I²C addresses on one bus</p>
 <hr>
+<h2 id="final-major-components-summary">Final Major Components Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Part / Device</th>
+<th>Purpose in Project</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microcontroller</td>
+<td>ESP32-S3</td>
+<td>Main controller for the light subsystem. It reads processed sensor data, makes light/no-light decisions, and handles UART communication with the rest of the submarine system.</td>
+</tr>
+<tr>
+<td>Light Sensor</td>
+<td>NORPS-12 Photoresistor (LDR)</td>
+<td>Detects ambient light level in the environment around the submarine.</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>ADS1115</td>
+<td>Converts the analog signal from the photoresistor into a 16-bit digital value that can be read by the ESP32-S3 through I2C.</td>
+</tr>
+<tr>
+<td>Voltage Regulator</td>
+<td>LM2575-3.3 Switching Regulator</td>
+<td>Steps the input power down to a stable 3.3V supply for the subsystem electronics.</td>
+</tr>
+<tr>
+<td>Power Input</td>
+<td>12V DC Barrel Jack Adapter</td>
+<td>Provides external power input to the subsystem board.</td>
+</tr>
+<tr>
+<td>Programming / Interface Port</td>
+<td>USB Connector / USB Programmer Interface</td>
+<td>Used to program the ESP32-S3 and support testing and debugging during development.</td>
+</tr>
+<tr>
+<td>Communication Interface</td>
+<td>UART Daisy-Chain Headers</td>
+<td>Allows the subsystem to connect to the rest of the team’s submarine system and send, receive, or forward UART packets.</td>
+</tr>
+</tbody>
+</table>
 
 
 
