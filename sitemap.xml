@@ -26,11 +26,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/03a-MCU/ESP%2032/</loc>
-         <lastmod>2026-05-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
@@ -97,6 +92,11 @@
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/04-Examples-to-Remove/charts/</loc>
+         <lastmod>2026-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/MCU/ESP%2032/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
